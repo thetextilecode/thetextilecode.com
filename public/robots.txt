@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thetextilecode.com
+
+# Sitemaps
+Sitemap: https://thetextilecode.com/sitemap.xml
