@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://opensft.netlify.app"
+  to = "https://www.thetextilecode.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.opensft.org"
+  to = "https://www.thetextilecode.com"
+  status = 301
+  force = true
