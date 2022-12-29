@@ -1,6 +1,6 @@
 # thetextilecode.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/69bdacdf-1cd3-4858-94d7-723716dff0b5/deploy-status)](https://app.netlify.com/sites/opensft/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58786a3a-22f0-4464-af50-0286ea2c3bed/deploy-status)](https://app.netlify.com/sites/thetextilecode/deploys)
 
 ## Installation
 
