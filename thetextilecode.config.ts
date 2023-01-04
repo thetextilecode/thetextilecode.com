@@ -162,8 +162,8 @@ export const infoConfig = {
   logoIllustration: '/assets/images/logo/illustration-light-sm.png',
   logoIllustrationWidth: 185,
   logoIllustrationHeight: 239,
-  logoWidth: 351,
-  logoHeight: 97,
+  logoWidth: 4167,
+  logoHeight: 1324,
   phone: '+44 20 8036 4986',
 };
 
@@ -217,7 +217,7 @@ export const seoConfig = {
   // meta_twitter_card: 'summary',
   meta_og_url: 'https://www.thetextilecode.com',
   meta_og_description:
-    'Bridging the worlds of technology and fashion & textiles by providing conscious software.',
+    'Bridging technology and fashion & textiles by providing conscious software.',
   meta_og_image: '',
   meta_twitter_card: 'summary_large_image',
   meta_twitter_site: '@thetextilecode',
