@@ -49,13 +49,10 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                   <li>
                     The most common types of information we collect include things like: user-names,
                     member names, email addresses, IP addresses, other contact details, survey
-                    responses, blogs, photos, payment information such as payment agent details,
-                    transactional details, tax information, support queries, forum comments (if
-                    applicable), content you direct us to make available on our Sites (such as item
-                    descriptions), your actions on our Sites (including any selections or inputs
-                    into items) and web and email analytics data. We will also collect personal
-                    information from job applications (such as, your CV, the application form
-                    itself, cover letter and interview notes).
+                    responses, blogs, photos, support queries, forum comments (if applicable),
+                    content you direct us to make available on our Sites, your actions on our Sites
+                    (including any selections or inputs into items) and web and email analytics
+                    data.
                   </li>
                 </ol>
                 <h4>How we collect personal information</h4>
@@ -71,25 +68,6 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                     subscribe to a newsletter, email list, submit feedback, enter a contest, fill
                     out a survey, or send us a communication.
                   </li>
-                  <li>
-                    As the operator of digital content marketplaces, we have a legitimate interest
-                    in verifying the identity of our authors. We believe that knowing who our
-                    authors are will strengthen the integrity of our marketplaces by reducing fraud,
-                    making authors more accountable for their content and giving Open Source Fashion
-                    & Textiles CIC and customers the ability to enforce contracts for authors who
-                    break the rules. Open Source Fashion & Textiles CIC also has certain legal
-                    obligations that require us to know who our authors are in certain
-                    circumstances. In light of this, if you are an author we will verify your
-                    identity, in particular, your name, full address and date of birth by asking you
-                    to show us a Photo ID document. The verification procedure is called Open Source
-                    Fashion & Textiles CIC Verify. Open Source Fashion & Textiles CIC Verify will be
-                    carried out by our service provider Jumio Corporation located at 395 Page Mill
-                    Road, Suite 150, Palo Alto, California, USA. As part of Open Source Fashion &
-                    Textiles CIC Verify, you will be asked to take a selfie which will then be
-                    compared against your Photo ID document using facial recognition technology. We
-                    will use your Photo ID document solely to carry out Open Source Fashion &
-                    Textiles CIC Verify and delete it after the completion of this process.
-                  </li>
                 </ol>
                 <h4>Personal information we collect about you from others</h4>
                 <ol start={9}>
@@ -99,10 +77,6 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                     from other sources. In particular:
                     <ol>
                       <li>
-                        financial and/or transaction details from payment providers located in the
-                        US, UK, and Australia in order to process a transaction;
-                      </li>
-                      <li>
                         third party service providers (like Google, Facebook) who are located in the
                         US or UK, which may provide information about you when you link, connect, or
                         login to your account with the third party provider and they send us
@@ -110,19 +84,6 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                         only occurs if you are using Open Source Fashion & Textiles CIC Studio. The
                         information varies and is controlled by that service provider or as
                         authorized by you via your privacy settings at that service provider; and
-                      </li>
-                      <li>
-                        other third party sources/and or partners from Australia, US or UK, whereby
-                        we receive additional information about you (to the extent permitted by
-                        applicable law), such as demographic data or fraud detection information,
-                        and combine it with information we have about you. For example, fraud
-                        warnings from service providers like identity verification service. We also
-                        receive information about you and your activities on and off the Open Source
-                        Fashion & Textiles CIC platform through partnerships, or about your
-                        experiences and interactions from our partner ad networks. We also receive
-                        information about you as a rights holder from our third party authors. For
-                        example, information in the form of a model release when your image is used
-                        in an item made available on our Sites.
                       </li>
                     </ol>
                   </li>
@@ -132,11 +93,6 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                   <li>
                     We will use your personal information:
                     <ol>
-                      <li>
-                        To fulfil a contract, or take steps linked to a contract: in particular, in
-                        facilitating and processing transactions that take place on the Sites, like
-                        where you purchase an item from our marketplace.
-                      </li>
                       <li>
                         Where this is necessary for purposes which are in our, or third parties’,
                         legitimate interests. These interests include:
@@ -178,15 +134,7 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                           <li>improving our products and services;</li>
                           <li>
                             providing general administrative and performance functions and
-                            activities; and
-                          </li>
-                          <li>
-                            verifying your identity by comparing a selfie taken by you against your
-                            Photo ID document using facial recognition technology (as is necessary
-                            for the establishment, exercise or defense of legal claims); and
-                          </li>
-                          <li>
-                            processing your job application to Open Source Fashion & Textiles CIC.
+                            activities
                           </li>
                         </ol>
                       </li>
@@ -325,10 +273,7 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                 <h4>Cookies (not the type you eat!) and web analytics</h4>
                 <ol start={17}>
                   <li>
-                    For more information about how we use cookies, web beacons and similar
-                    technologies see our cookie policy
-                    <Link href="/privacy">here</Link>
-                    and for more general information on cookies, see
+                    For general information on cookies, see{' '}
                     <Link
                       href="http://www.allaboutcookies.org"
                       rel="noopener noreferrer"
