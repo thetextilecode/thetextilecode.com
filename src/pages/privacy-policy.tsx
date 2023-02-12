@@ -16,7 +16,7 @@ function Privacy({ config, newsletterId, newsletterUser }) {
           <div className="row">
             <div className="single-page pr-30">
               <div className="single-header style-2">
-                <h2>Privacy Policy</h2>
+                <h1>Privacy Policy</h1>
               </div>
               <div className="single-content">
                 <h4>Welcome to Open Source Fashion & Textiles CIC’s Privacy Policy</h4>

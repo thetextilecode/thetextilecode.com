@@ -52,6 +52,16 @@ export const postTags: ITag[] = [
     description: '',
   },
   {
+    label: 'Critical Path',
+    value: 'critical-path',
+    description: '',
+  },
+  {
+    label: 'eCommerce',
+    value: 'ecommerce',
+    description: '',
+  },
+  {
     label: 'ERP',
     value: 'erp',
     description: '',
@@ -87,6 +97,11 @@ export const postTags: ITag[] = [
     description: '',
   },
   {
+    label: 'Supply Chain',
+    value: 'supply-chain',
+    description: '',
+  },
+  {
     label: 'Transparency',
     value: 'transparency',
     description: '',
@@ -96,8 +111,9 @@ export const postTags: ITag[] = [
 export const siteConfig = {
   favicon: '/favicon.ico',
   url: 'https://www.thetextilecode.com',
-  title: 'The Textile Code | fashion tech and sustainability',
-  description: 'Bridging the worlds of technology and fashion & textiles for a better planet.',
+  title: 'The Textile Code | fashion, technology, and sustainability',
+  description:
+    'Technology in the age of sustainability, zeroing in on the fashion and textiles industry.',
   shareImage: '/assets/images/logo/screenshot.png',
   shareImageAlt: 'The Textile Code',
 };
@@ -217,7 +233,8 @@ export const seoConfig = {
   // meta_twitter_card: 'summary',
   meta_og_url: 'https://www.thetextilecode.com',
   meta_og_description:
-    'Bridging technology and fashion & textiles by providing conscious software.',
+    'A fresh outlook on how technology can help us be more sustainable, with a focus on the fashion and textiles' +
+    ' industry, from the perspective of a software engineer and formerly unsustainable consumer.',
   meta_og_image: '',
   meta_twitter_card: 'summary_large_image',
   meta_twitter_site: '@thetextilecode',

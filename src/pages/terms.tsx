@@ -16,14 +16,14 @@ function Terms({ config, newsletterId, newsletterUser }) {
             <div className="col-lg-12">
               <div className="single-page pr-30 mb-lg-0 mb-sm-5">
                 <div className="single-header style-2">
-                  <h2>Terms of Service</h2>
+                  <h1>Terms of Service</h1>
                 </div>
                 <div className="single-content">
                   <p>
                     {' '}
                     Please read these Terms of Service (“Terms”, “Terms of Service”) carefully
-                    before using the https://thetextilecode.com website (the “Service”) operated by Open
-                    Source Fashion & Textiles CIC (“us”, “we”, or “our”).
+                    before using the https://thetextilecode.com website (the “Service”) operated by
+                    Open Source Fashion & Textiles CIC (“us”, “we”, or “our”).
                   </p>
                   <p>
                     Your access to and use of the Service is conditioned on your acceptance of and

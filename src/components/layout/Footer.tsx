@@ -40,14 +40,6 @@ const Footer = ({
                     <br />
                     {configInfo.addressLine2}, {configInfo.addressCity} {configInfo.addressPostcode}
                   </p>
-                  <p className="wow fadeIn animated">
-                    <strong>Phone: </strong>
-                    {configInfo.phone}
-                  </p>
-                  <p className="wow fadeIn animated">
-                    <strong>Hours: </strong>
-                    {configInfo.hours}
-                  </p>
                   <h5 className="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                   <SocialIcons
                     facebook={configSocial.facebook}

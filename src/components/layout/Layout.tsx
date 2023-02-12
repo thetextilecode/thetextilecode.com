@@ -78,6 +78,11 @@ const Layout = ({
         <link rel="canonical" href={`${configSite.url}${router.asPath}`} />
 
         <meta
+          name={'description'}
+          content={customMeta?.description ?? configSeo.meta_og_description}
+        />
+
+        <meta
           property="og:description"
           content={customMeta?.description ?? configSeo.meta_og_description}
         />

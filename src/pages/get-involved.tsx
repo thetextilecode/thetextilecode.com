@@ -16,7 +16,7 @@ function GetInvolved({ config, newsletterId, newsletterUser }) {
           <div className="row">
             <div className="single-page pr-30">
               <div className="single-header style-2">
-                <h2>Get Involved</h2>
+                <h1>Get Involved</h1>
               </div>
               <div className="single-content">
                 <h4>Businesses</h4>

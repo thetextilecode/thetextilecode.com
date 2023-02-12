@@ -128,13 +128,17 @@ const Resources = ({
               {/*</div>*/}
             </div>
             <div className="col-lg-9">
+              {/*<div className={'row'}>*/}
+              {/*  <h1>Resources</h1>*/}
+              {/*</div>*/}
               <div className="shop-product-filter">
                 <div className="total-product">
-                  <p>
-                    We found
-                    <strong className="text-brand">{resources.items.length}</strong>
-                    resources
-                  </p>
+                  <h1 className={'smaller'}>Resources</h1>
+                  {/*<p>*/}
+                  {/*  We found*/}
+                  {/*  <strong className="text-brand">{resources.items.length}</strong>*/}
+                  {/*  resources*/}
+                  {/*</p>*/}
                 </div>
                 <div className="sort-by-product-area">
                   <div className="sort-by-cover mr-10">
