@@ -11,7 +11,7 @@ updates:
       interval: "daily"
     open-pull-requests-limit: 15
     commit-message:
-      prefix: "[skip netlify] "
+      prefix: "chore(deps): [skip netlify] "
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
@@ -19,5 +19,5 @@ updates:
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "[skip netlify] "
+      prefix: "chore(deps): [skip netlify] "
 
