@@ -40,7 +40,7 @@
     "react-toast-notifications": "^2.5.1",
     "react-toastify": "^9.1.1",
     "reactstrap": "^9.1.6",
-    "redux": "^4.1.2",
+    "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
     "select2": "^4.1.0-rc.0",
