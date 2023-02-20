@@ -42,7 +42,7 @@
     "reactstrap": "^9.0.0",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.0",
+    "redux-thunk": "^2.4.2",
     "select2": "^4.1.0-rc.0",
     "sharp": "^0.30.6",
     "slick-carousel": "^1.8.1",
