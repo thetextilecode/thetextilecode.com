@@ -61,14 +61,12 @@ const MobileMenu = ({
           <div className="mobile-header-logo">
             {/* MOBILE LOGO */}
             <Link href="/index">
-
               <Image
                 src="/assets/images/logo/logo-combined-clear-sm.png"
                 alt="logo"
                 width={250}
                 height={68}
               />
-
             </Link>
           </div>
 
@@ -98,66 +96,54 @@ const MobileMenu = ({
             {/* BROWSE CATEGORIES */}
             {configMobile.showCategories && (
               <div className="main-category-wrap mobile-header-border">
-                <Link
-                  href="src/components/layout/MobileMenu#"
-                  className="category-button-active-2">
-
+                <Link href="src/components/layout/MobileMenu#" className="category-button-active-2">
                   <span className="fi-rs-apps"></span>Browse Categories
                 </Link>
                 <div className="category-dropdown-wrap category-dropdown-active-small">
                   <ul>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-dress"></i>Women's Clothing
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-tshirt"></i>Men's Clothing
                       </Link>
                     </li>
                     <li>
                       {' '}
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-smartphone"></i>Cellphones
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-desktop"></i>Computer & Office
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-cpu"></i>Consumer Electronics
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-home"></i>Home & Garden
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-high-heels"></i>Shoes
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-teddy-bear"></i>Mother & Kids
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-
                         <i className="evara-font-kite"></i>Outdoor fun
                       </Link>
                     </li>
@@ -168,8 +154,9 @@ const MobileMenu = ({
 
             {/* MAIN MENU */}
             <nav>
-              <ul className="mobile-menu" ref={domNode}>
-                {menu.map((item, index) => {
+              {/*<ul className="mobile-menu" ref={domNode}>*/}
+              <ul className="mobile-menu">
+                {menu?.map((item, index) => {
                   const newIdx = index + 100;
                   return (
                     <li
@@ -185,18 +172,14 @@ const MobileMenu = ({
                           <i className="fi-rs-angle-small-down"></i>
                         </span>
                       )}
-                      <Link href={item.href}>
-                        {item.title}
-                      </Link>
+                      <Link href={item.href}>{item.title}</Link>
                       <ul className={isActive.key == newIdx ? 'dropdown' : 'd-none'}>
                         {item.children && (
                           <ul className="sub-menu">
                             {item.children.map((child, idx) => {
                               return (
                                 <li key={idx}>
-                                  <Link href={child.href}>
-                                    {child.title}
-                                  </Link>
+                                  <Link href={child.href}>{child.title}</Link>
                                 </li>
                               );
                             })}
@@ -216,91 +199,59 @@ const MobileMenu = ({
                     <span className="menu-expand" onClick={() => handleToggle(3)}>
                       <i className="fi-rs-angle-small-down"></i>
                     </span>
-                    <Link href="src/components/layout/MobileMenu#">
-                      Mega menu
-                    </Link>
+                    <Link href="src/components/layout/MobileMenu#">Mega menu</Link>
                     <ul className={isActive.key == 3 ? 'dropdown' : 'd-none'}>
                       <li className="menu-item-has-children">
                         <span className="menu-expand"></span>
-                        <Link href="src/components/layout/MobileMenu#">
-                          Women's Fashion
-                        </Link>
+                        <Link href="src/components/layout/MobileMenu#">Women's Fashion</Link>
                         <ul className="dropdown">
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Dresses
-                            </Link>
+                            <Link href="/products/shop-grid-right">Dresses</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Blouses & Shirts
-                            </Link>
+                            <Link href="/products/shop-grid-right">Blouses & Shirts</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Hoodies & Sweatshirts
-                            </Link>
+                            <Link href="/products/shop-grid-right">Hoodies & Sweatshirts</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Women's Sets
-                            </Link>
+                            <Link href="/products/shop-grid-right">Women's Sets</Link>
                           </li>
                         </ul>
                       </li>
                       <li className="menu-item-has-children">
                         <span className="menu-expand"></span>
-                        <Link href="src/components/layout/MobileMenu#">
-                          Men's Fashion
-                        </Link>
+                        <Link href="src/components/layout/MobileMenu#">Men's Fashion</Link>
                         <ul className="dropdown">
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Jackets
-                            </Link>
+                            <Link href="/products/shop-grid-right">Jackets</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Casual Faux Leather
-                            </Link>
+                            <Link href="/products/shop-grid-right">Casual Faux Leather</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Genuine Leather
-                            </Link>
+                            <Link href="/products/shop-grid-right">Genuine Leather</Link>
                           </li>
                         </ul>
                       </li>
                       <li className="menu-item-has-children">
                         <span className="menu-expand"></span>
-                        <Link href="src/components/layout/MobileMenu#">
-                          Technology
-                        </Link>
+                        <Link href="src/components/layout/MobileMenu#">Technology</Link>
                         <ul className="dropdown">
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Gaming Laptops
-                            </Link>
+                            <Link href="/products/shop-grid-right">Gaming Laptops</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Ultraslim Laptops
-                            </Link>
+                            <Link href="/products/shop-grid-right">Ultraslim Laptops</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Tablets
-                            </Link>
+                            <Link href="/products/shop-grid-right">Tablets</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Laptop Accessories
-                            </Link>
+                            <Link href="/products/shop-grid-right">Laptop Accessories</Link>
                           </li>
                           <li>
-                            <Link href="/products/shop-grid-right">
-                              Tablet Accessories
-                            </Link>
+                            <Link href="/products/shop-grid-right">Tablet Accessories</Link>
                           </li>
                         </ul>
                       </li>
@@ -319,19 +270,13 @@ const MobileMenu = ({
           {configMobile.showFooterContact && (
             <div className="mobile-header-info-wrap mobile-header-border">
               <div className="single-mobile-header-info mt-30">
-                <Link href="/contact">
-                   Our location 
-                </Link>
+                <Link href="/contact">Our location</Link>
               </div>
               <div className="single-mobile-header-info">
-                <Link href="/login-register">
-                  Log In / Sign Up 
-                </Link>
+                <Link href="/login-register">Log In / Sign Up</Link>
               </div>
               <div className="single-mobile-header-info">
-                <Link href="src/components/layout/MobileMenu#">
-                  {configInfo.phone}
-                </Link>
+                <Link href="src/components/layout/MobileMenu#">{configInfo.phone}</Link>
               </div>
             </div>
           )}

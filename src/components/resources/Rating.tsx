@@ -36,7 +36,7 @@ const Rating = ({ updateProductRating }: IRating) => {
     <>
       {ratings.map((rate, i) => (
         <>
-          <div className={active == i ? 'active' : null} onClick={() => handleClick(i, rate.value)}>
+          <div className={active == i ? 'active' : ''} onClick={() => handleClick(i, rate.value)}>
             <a>
               {i == 0 ? (
                 'All'

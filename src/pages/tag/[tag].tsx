@@ -73,10 +73,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       'tags',
       'title',
     ],
-    params.tag.toString()
+    params?.tag?.toString()
   );
 
-  const tag = getTagByValue(params.tag.toString());
+  const tag = getTagByValue(params?.tag?.toString() ?? '');
 
   return {
     props: {
@@ -90,7 +90,7 @@ export async function getStaticPaths() {
   const tags = getAllTags(['value']);
 
   // Get the paths we want to pre-render based on posts
-  const tempPaths = [];
+  const tempPaths: any[] = [];
 
   tags.map((tagData) => {
     tempPaths.push({ params: { tag: tagData.value } });

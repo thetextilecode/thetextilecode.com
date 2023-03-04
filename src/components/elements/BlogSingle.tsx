@@ -18,7 +18,10 @@ const BlogSingle = ({ post }: IBlogSingle) => {
         <div className="single-header-meta">
           <div className="entry-meta meta-1 font-xs mt-15 mb-15">
             <span className="post-by">
-              By <Link href="/#" legacyBehavior>{blogConfig.author}</Link>
+              By{' '}
+              <Link href="/#" legacyBehavior>
+                {blogConfig.author}
+              </Link>
             </span>
             <span className="post-on has-dot">{post.date}</span>
             <span className="time-reading has-dot">8 mins read</span>
@@ -32,10 +35,10 @@ const BlogSingle = ({ post }: IBlogSingle) => {
           <div style={{ width: '100%' }}>
             <Image
               src={post.image}
-              alt={post.imageAlt ?? null}
+              alt={post?.imageAlt ?? ''}
               // layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
-              width={post.imageOriginalWidth ?? null}
-              height={post.imageOriginalHeight ?? null}
+              width={post.imageOriginalWidth}
+              height={post.imageOriginalHeight}
             />
           </div>
         </figure>
@@ -50,18 +53,16 @@ const BlogSingle = ({ post }: IBlogSingle) => {
           <Link
             href="/blog-category-big"
             rel="tag"
-            className="hover-up btn btn-sm btn-rounded mr-10">
-            
-              deer
-            
+            className="hover-up btn btn-sm btn-rounded mr-10"
+          >
+            deer
           </Link>
           <Link
             href="/blog-category-big"
             rel="tag"
-            className="hover-up btn btn-sm btn-rounded mr-10">
-            
-              nature
-            
+            className="hover-up btn btn-sm btn-rounded mr-10"
+          >
+            nature
           </Link>
         </div>
         <ShareIcons />

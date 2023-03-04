@@ -130,7 +130,7 @@ export interface IResource {
     percentage?: number;
   };
   images?: {
-    img?: any;
+    img: any;
     height: number;
     width: number;
   }[];

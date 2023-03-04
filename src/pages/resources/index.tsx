@@ -36,31 +36,34 @@ const Resources = ({
     showLimit = 12,
     showPagination = 4;
 
-  let [pagination, setPagination] = useState([]);
+  let [pagination, setPagination] = useState<any[]>([]);
   let [limit, setLimit] = useState(showLimit);
-  let [pages, setPages] = useState(Math.ceil(resources.items.length / limit));
+  // @ts-ignore
+  let [pages, setPages] = useState(Math.ceil(resources?.items.length / limit));
   let [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     fetchResource(searchTerm, '/static/resource.json', resourceFilters);
     cratePagination();
-  }, [resourceFilters, limit, pages, resources.items.length]);
+  }, [resourceFilters, limit, pages, resources?.items.length]);
 
   const cratePagination = () => {
     // set pagination
-    let arr = new Array(Math.ceil(resources.items.length / limit))
+    // @ts-ignore
+    let arr = new Array(Math.ceil(resources?.items.length / limit))
       // .fill()
       // using .fill(0) for now to get past the type checker, not using this component yet
       .fill(0)
       .map((_, idx) => idx + 1);
 
     setPagination(arr);
+    // @ts-ignore
     setPages(Math.ceil(resources.items.length / limit));
   };
 
   const startIndex = currentPage * limit - limit;
   const endIndex = startIndex + limit;
-  const getPaginatedResources = resources.items.slice(startIndex, endIndex);
+  const getPaginatedResources = resources?.items.slice(startIndex, endIndex);
 
   let start = Math.floor((currentPage - 1) / showPagination) * showPagination;
   let end = start + showPagination;
@@ -81,7 +84,8 @@ const Resources = ({
   const selectChange = (e) => {
     setLimit(Number(e.target.value));
     setCurrentPage(1);
-    setPages(Math.ceil(resources.items.length / Number(e.target.value)));
+    // @ts-ignore
+    setPages(Math.ceil(resources?.items.length / Number(e.target.value)));
   };
   return (
     <Layout
@@ -150,9 +154,9 @@ const Resources = ({
                 </div>
               </div>
               <div className="row product-grid-3">
-                {getPaginatedResources.length === 0 && <h3>No Resources Found </h3>}
+                {getPaginatedResources?.length === 0 && <h3>No Resources Found </h3>}
 
-                {getPaginatedResources.map((item, i) => (
+                {getPaginatedResources?.map((item, i) => (
                   <div className="col-lg-4 col-md-4 col-12 col-sm-6" key={i}>
                     <SingleResource resource={item} />
                   </div>

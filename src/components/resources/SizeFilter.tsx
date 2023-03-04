@@ -29,22 +29,19 @@ const SizeFilter = ({ updateProductFilters }) => {
   };
 
   return (
-    <ul className='list-filter size-filter font-small'>
+    <ul className="list-filter size-filter font-small">
       {sizes.map((tag, i) => (
         <li
-          className={active == i ? 'active' : null}
+          className={active == i ? 'active' : ''}
           onClick={() => handleClick(i, tag.value)}
           key={i}
         >
-          <a>
-            {i == 0 ? 'All' : `${tag.value}`}
-          </a>
+          <a>{i == 0 ? 'All' : `${tag.value}`}</a>
         </li>
       ))}
     </ul>
   );
 };
-
 
 const mapDidpatchToProps = {
   updateProductFilters,

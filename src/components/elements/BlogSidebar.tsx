@@ -37,10 +37,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
               {categories.map((category, idx) => {
                 return (
                   <li className={'cat-item cat-item-' + idx} key={idx}>
-                    <Link href={`/category/${category.value}`}>
-                      {category.label}
-                    </Link>{' '}
-                    {/*(3)*/}
+                    <Link href={`/category/${category.value}`}>{category.label}</Link> {/*(3)*/}
                   </li>
                 );
               })}
@@ -66,11 +63,11 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                   key={idx}
                 >
                   <div className="post-thumb d-flex border-radius-5 img-hover-scale mb-15">
-                    <Link href={`/${post.slug}`} legacyBehavior>
+                    <Link href={`/${post.slug}`}>
                       <div style={{ width: '100%' }}>
                         <a>
                           <Image
-                            src={post.image}
+                            src={post.image as string}
                             alt={post.imageAlt ?? ''}
                             sizes="100vw"
                             style={{ width: '100%', height: 'auto' }}
@@ -83,7 +80,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                   </div>
                   <div className="post-content media-body">
                     <h5 className="post-title mb-10 text-limit-2-row">
-                      <Link href={`/${post.slug}`} legacyBehavior>
+                      <Link href={`/${post.slug}`}>
                         <>
                           <a>{post.title}</a>
                           {post.draft && <DraftBadge />}
@@ -126,7 +123,6 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
             </h4>
             <Link href="/">
               Take Survey<i className="fi-rs-arrow-right"></i>
-
             </Link>
           </div>
         </div>

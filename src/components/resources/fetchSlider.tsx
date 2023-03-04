@@ -25,10 +25,10 @@ const FetchSlider = ({ resourceFilters }) => {
     // const allResources = await request.json();
 
     // Featured Resource
-    const featuredResources = allResources.filter((item) => item.featured);
+    const featuredResources = allResources?.filter((item) => item.featured);
 
-    setFeatured(featuredResources);
-    setRelated(allResources);
+    if (featuredResources) setFeatured(featuredResources);
+    if (allResources) setRelated(allResources);
   };
 
   return (

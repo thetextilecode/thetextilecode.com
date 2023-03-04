@@ -6,6 +6,8 @@ import Header from './Header';
 import MobileMenu from './MobileMenu';
 import { IMenu, IMetaProps } from '../../../types';
 import { useRouter } from 'next/router';
+// import { Cedarville_Cursive, Lato, Quando } from 'next/font/google';
+// import { Quando } from 'next/font/google';
 import Script from 'next/script';
 
 export interface ILayout {
@@ -28,6 +30,22 @@ export interface ILayout {
   sub?: any;
   subChild?: any;
 }
+
+// const cedarvilleCursive = Cedarville_Cursive({
+//   weight: ['400'],
+//   subsets: ['latin'],
+// });
+//
+// const lato = Lato({
+//   weight: ['100', '300', '400', '700', '900'],
+//   style: ['normal', 'italic'],
+//   subsets: ['latin'],
+// });
+//
+// const quando = Quando({
+//   weight: ['400'],
+//   subsets: ['latin'],
+// });
 
 const Layout = ({
   children,
@@ -55,18 +73,25 @@ const Layout = ({
   const toggleClick = () => {
     setToggled(!isToggled);
     isToggled
-      ? document.querySelector('body').classList.remove('mobile-menu-active')
-      : document.querySelector('body').classList.add('mobile-menu-active');
+      ? document.querySelector('body')?.classList.remove('mobile-menu-active')
+      : document.querySelector('body')?.classList.add('mobile-menu-active');
   };
 
   return (
     <>
       <Head>
         <title>{customMeta?.title ?? configSite.title}</title>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quando&display=swap');
-        </style>
+        {/*<style>*/}
+        {/*  @import*/}
+        {/*  url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quando&display=swap');*/}
+        {/*</style>*/}
+        {/*className={`${cedarvilleCursive.className} ${lato.className} ${quando.className}`}*/}
+
+        {/*<style jsx global>{`*/}
+        {/*  html {*/}
+        {/*    font-family: ${quando.style.fontFamily};*/}
+        {/*  }*/}
+        {/*`}</style>*/}
 
         {/*<!-- Favicon -->*/}
         {/*<link rel='icon' href={ configSite.favicon } />*/}

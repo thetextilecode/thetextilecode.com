@@ -2,8 +2,8 @@ import storage from '../../lib/localStorage';
 import { deleteProduct, findProductIndexById } from '../../lib/util';
 import * as Types from '../constants/actionTypes';
 
-export default (state = [], action) => {
-  let index = null;
+export default (state: any[] = [], action) => {
+  let index: number = -1;
 
   switch (action.type) {
     case Types.INIT_LOCALSTORAGE:

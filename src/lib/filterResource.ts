@@ -16,6 +16,7 @@ export default (resourceList, filters) => {
             ...filteredList.sort((a, b) => {
               if (a.price < b.price) return -1;
               if (a.price > b.price) return 1;
+              return 1;
             }),
           ];
         } else {
@@ -25,6 +26,7 @@ export default (resourceList, filters) => {
               ...filteredList.sort((a, b) => {
                 if (b.price < a.price) return -1;
                 if (b.price > a.price) return 1;
+                return 1;
               }),
             ];
           } else {
@@ -45,7 +47,7 @@ export default (resourceList, filters) => {
 // Filter Resource By Price
 
 function filterByPrice(filteredList, price, key) {
-  let list = [];
+  let list: any[] = [];
 
   for (let index = 0; index < filteredList.length; index++) {
     const resource = filteredList[index];
@@ -62,7 +64,7 @@ function filterByPrice(filteredList, price, key) {
 // Filter Resource by key size/category/brand etc
 
 function filterByKey(filteredList, size, key) {
-  let list = [];
+  let list: any[] = [];
   if (!size || size.length === 0) return filteredList;
   for (let index = 0; index < filteredList.length; index++) {
     const resource = filteredList[index];

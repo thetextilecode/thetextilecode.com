@@ -66,129 +66,133 @@ const ArticlePage = ({
     type: 'article',
   };
 
-  return <>
-    {!isLocal && post.draft ? (
-      <>This post has not yet been published. Please try again later.</>
-    ) : (
-      <Layout
-        customMeta={customMeta}
-        parent="Home"
-        sub="Blog"
-        subChild="Blog Details"
-        newsletterUser={newsletterUser}
-        newsletterId={newsletterId}
-        {...config}
-      >
-        <section className="mt-50 mb-50">
-          <div className="container custom">
-            <div className="row justify-content-center">
-              <div className="col-lg-7">
-                <article>
-                  <div className="single-page pl-30">
-                    <div className="single-header style-2">
-                      <div className="d-flex">
-                        <h1>{post.title}</h1>
-                        {post.draft && (
-                          <div style={{ marginLeft: '20px' }}>
-                            <h3>
-                              <DraftBadge />
-                            </h3>
+  return (
+    <>
+      {!isLocal && post.draft ? (
+        <>This post has not yet been published. Please try again later.</>
+      ) : (
+        <Layout
+          customMeta={customMeta}
+          parent="Home"
+          sub="Blog"
+          subChild="Blog Details"
+          newsletterUser={newsletterUser}
+          newsletterId={newsletterId}
+          {...config}
+        >
+          <section className="mt-50 mb-50">
+            <div className="container custom">
+              <div className="row justify-content-center">
+                <div className="col-lg-7">
+                  <article>
+                    <div className="single-page pl-30">
+                      <div className="single-header style-2">
+                        <div className="d-flex">
+                          <h1>{post.title}</h1>
+                          {post.draft && (
+                            <div style={{ marginLeft: '20px' }}>
+                              <h3>
+                                <DraftBadge />
+                              </h3>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="single-header-meta">
+                          <div className="entry-meta meta-1 font-xs mt-15 mb-15">
+                            <span className="post-by">
+                              By{' '}
+                              <Link href="/#" legacyBehavior>
+                                {config.configBlog.author}
+                              </Link>
+                            </span>
+                            <span className="post-on has-dot">
+                              Published on{'  '}
+                              {format(parseISO(post.date as string), 'MMMM dd, yyyy')}
+                            </span>
+                            {post.readTime && (
+                              <span className="time-reading has-dot">
+                                {post.readTime} min{post.readTime < 0 ?? 's'} read
+                              </span>
+                            )}
+                            {/*<span className='hit-count  has-dot'>29k Views</span>*/}
                           </div>
-                        )}
+                          <ShareIcons url={`${baseUrl}/${post.slug}`} title={post.title} />
+                        </div>
+                      </div>
+                      {post.image && (
+                        <figure className="single-thumbnail">
+                          <div style={{ width: '100%' }}>
+                            <Image
+                              src={post.image}
+                              alt={post?.imageAlt ?? ''}
+                              // layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
+                              width={post?.imageOriginalWidth}
+                              height={post?.imageOriginalHeight}
+                            />
+                          </div>
+                        </figure>
+                      )}
+
+                      <div className="single-content">
+                        <MDXRemote {...source} components={components} />
                       </div>
 
-                      <div className="single-header-meta">
-                        <div className="entry-meta meta-1 font-xs mt-15 mb-15">
-                          <span className="post-by">
-                            By <Link href="/#" legacyBehavior>{config.configBlog.author}</Link>
-                          </span>
-                          <span className="post-on has-dot">
-                            Published on{'  '}
-                            {format(parseISO(post.date), 'MMMM dd, yyyy')}
-                          </span>
-                          {post.readTime && (
-                            <span className="time-reading has-dot">
-                              {post.readTime} min{post.readTime < 0 ?? 's'} read
-                            </span>
-                          )}
-                          {/*<span className='hit-count  has-dot'>29k Views</span>*/}
+                      <div
+                        className="entry-bottom mt-50 mb-30 wow fadeIn  animated"
+                        style={{ visibility: 'visible', animationName: 'fadeIn' }}
+                      >
+                        <div className="tags w-50 w-sm-100">
+                          {post.tags &&
+                            post.tags.map((tag, idx) => {
+                              return (
+                                <Link
+                                  href={`/tag/${encodeURI(tag)}`}
+                                  key={idx}
+                                  rel={'tag'}
+                                  className={'hover-up btn btn-sm btn-rounded mr-10'}
+                                >
+                                  {tag}
+                                </Link>
+                              );
+                            })}
                         </div>
                         <ShareIcons url={`${baseUrl}/${post.slug}`} title={post.title} />
                       </div>
+
+                      {config.configBlog.showComments && (
+                        <>
+                          <CommentsArea />
+                          <CommentsForm />
+                        </>
+                      )}
                     </div>
-                    {post.image && (
-                      <figure className="single-thumbnail">
-                        <div style={{ width: '100%' }}>
-                          <Image
-                            src={post.image}
-                            alt={post?.imageAlt}
-                            // layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
-                            width={post?.imageOriginalWidth}
-                            height={post?.imageOriginalHeight}
-                          />
-                        </div>
-                      </figure>
-                    )}
-
-                    <div className="single-content">
-                      <MDXRemote {...source} components={components} />
-                    </div>
-
-                    <div
-                      className="entry-bottom mt-50 mb-30 wow fadeIn  animated"
-                      style={{ visibility: 'visible', animationName: 'fadeIn' }}
-                    >
-                      <div className="tags w-50 w-sm-100">
-                        {post.tags &&
-                          post.tags.map((tag, idx) => {
-                            return (
-                              (<Link
-                                href={`/tag/${encodeURI(tag)}`}
-                                key={idx}
-                                rel={'tag'}
-                                className={'hover-up btn btn-sm btn-rounded mr-10'}>
-
-                                {tag}
-
-                              </Link>)
-                            );
-                          })}
-                      </div>
-                      <ShareIcons url={`${baseUrl}/${post.slug}`} title={post.title} />
-                    </div>
-
-                    {config.configBlog.showComments && (
-                      <>
-                        <CommentsArea />
-                        <CommentsForm />
-                      </>
-                    )}
-                  </div>
-                </article>
-              </div>
-              <div className="col-lg-3 primary-sidebar sticky-sidebar">
-                <BlogSidebar
-                  categories={categories}
-                  configSidebar={config.configSidebar}
-                  show={config.configSidebar.postsPerSidebar}
-                  tags={tags}
-                  trendingPosts={posts.filter((post) => post.trending)}
-                />
+                  </article>
+                </div>
+                <div className="col-lg-3 primary-sidebar sticky-sidebar">
+                  <BlogSidebar
+                    categories={categories}
+                    configSidebar={config.configSidebar}
+                    show={config.configSidebar.postsPerSidebar}
+                    tags={tags}
+                    trendingPosts={posts.filter((post) => post.trending)}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </Layout>
-    )}
-  </>;
+          </section>
+        </Layout>
+      )}
+    </>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
+  const postFilePath = path.join(POSTS_PATH, `${params?.slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
-  data.slug = params.slug;
+  data.slug = params?.slug;
 
   const mdxSource = await serialize(content, {
     scope: data,

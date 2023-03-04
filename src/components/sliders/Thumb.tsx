@@ -54,7 +54,7 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
           ))}
       </Swiper>
       <Swiper
-        onSwiper={setThumbsSwiper}
+        onSwiper={() => setThumbsSwiper}
         loop={true}
         spaceBetween={10}
         slidesPerView={4}

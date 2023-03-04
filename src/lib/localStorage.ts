@@ -4,6 +4,7 @@ class storage {
   }
 
   static get(key) {
+    // @ts-ignore
     return JSON.parse(localStorage.getItem(key));
   }
 }

@@ -71,11 +71,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       'slug',
       'title',
     ],
-    null,
-    params.category
+    undefined,
+    params?.category
   );
 
-  const category = getCategoryByValue(params.category);
+  const category = getCategoryByValue(params?.category ?? '');
 
   return {
     props: {
@@ -89,7 +89,7 @@ export async function getStaticPaths() {
   const categories = getAllCategories();
 
   // Get the paths we want to pre-render based on posts
-  const tempPaths = [];
+  const tempPaths: any[] = [];
 
   categories.map((category) => {
     tempPaths.push({ params: { category: category.value } });
