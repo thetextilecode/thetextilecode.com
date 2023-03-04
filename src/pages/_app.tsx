@@ -17,6 +17,7 @@ import 'swiper/css/navigation';
 import Preloader from '../components/elements/Preloader';
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import Fonts from '../lib/fonts';
+// import { Cedarville_Cursive, Lato, Quando } from 'next/font/google';
 import {
   blogConfig,
   footerConfig,
@@ -50,6 +51,25 @@ export const pageview = (url) => {
 export const event = ({ action, params }) => {
   window.gtag('event', action, params);
 };
+
+// const cedarvilleCursive = Cedarville_Cursive({
+//   display: 'swap',
+//   weight: ['400'],
+//   subsets: ['latin'],
+// });
+//
+// const lato = Lato({
+//   display: 'fallback',
+//   weight: ['100', '300', '400', '700', '900'],
+//   style: ['normal', 'italic'],
+//   subsets: ['latin'],
+// });
+//
+// const quando = Quando({
+//   display: 'block',
+//   weight: ['400'],
+//   subsets: ['latin'],
+// });
 
 function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: CustomAppProps) {
   const [loading, setLoading] = useState<boolean>(false);
@@ -98,6 +118,8 @@ function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: C
                 config={config}
                 newsletterId={newsletterId}
                 newsletterUser={newsletterUser}
+                // className={`${cedarvilleCursive.className} ${lato.className} ${quando.className}`}
+                // className={`${cedarvilleCursive.className}`}
                 {...pageProps}
               />
             </StorageWrapper>

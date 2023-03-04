@@ -11,7 +11,7 @@ export interface IBlogList {
 const BlogList = ({ posts, show }: IBlogList) => {
   return (
     <>
-      {posts.slice(0, show).map((post, i) => (
+      {posts?.slice(0, show).map((post, i) => (
         <article className="wow fadeIn animated hover-up mb-30" key={i}>
           <div
             className="post-thumb"
@@ -20,7 +20,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
             }}
           >
             <div className="entry-meta">
-              <Link href={`/${post.slug}`} className="entry-meta meta-2">
+              <Link href={`/${post.slug}`} className="entry-meta meta-2" legacyBehavior>
                 {post.category ?? 'Technology'}
               </Link>
               {post.draft && (
@@ -34,9 +34,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
           </div>
           <div className="entry-content-2">
             <h3 className="post-title mb-15">
-              <Link href={`/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
+              <Link href={`/${post.slug}`}>{post.title}</Link>
             </h3>
             <p className="post-excerpt mb-30">{post.description}</p>
             <div className="entry-meta meta-1 font-xs color-grey mt-10 pb-10">
@@ -44,16 +42,14 @@ const BlogList = ({ posts, show }: IBlogList) => {
                 <span className="post-on">
                   {' '}
                   <i className="fi-rs-clock"></i>&nbsp;
-                  {format(parseISO(post.date), 'MMMM dd, yyyy')}
+                  {format(parseISO(post.date!), 'MMMM dd, yyyy')}
                 </span>
                 <span className="hit-count has-dot">
-                  {post.readTime} min{post.readTime < 0 ?? 's'} read
+                  {post.readTime} min{post.readTime! < 0 ?? 's'} read
                 </span>
               </div>
-              <Link href={`/${post.slug}`}>
-                <a className="text-brand">
-                  Read more <i className="fi-rs-arrow-right"></i>
-                </a>
+              <Link href={`/${post.slug}`} className="text-brand">
+                Read more<i className="fi-rs-arrow-right"></i>
               </Link>
             </div>
           </div>

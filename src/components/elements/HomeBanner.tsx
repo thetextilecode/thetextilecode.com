@@ -11,7 +11,8 @@ const HomeBanner = () => {
               <Image
                 src="/assets/images/banner/banner-osft-left.png"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={600}
                 height={712}
               />
@@ -23,10 +24,8 @@ const HomeBanner = () => {
                 Fashion Brand?
               </h4>
               <Link href="/get-involved">
-                <a>
-                  We Want to Hear
-                  <br /> From You <i className="fi-rs-arrow-right"></i>
-                </a>
+                We Want to Hear<br />From You<i className="fi-rs-arrow-right"></i>
+
               </Link>
             </div>
           </div>
@@ -39,7 +38,8 @@ const HomeBanner = () => {
               <Image
                 src="/assets/images/banner/banner-osft-sm-right.png"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={600}
                 height={334}
               />
@@ -51,9 +51,8 @@ const HomeBanner = () => {
                 You Can Help
               </h4>
               <Link href="/get-involved">
-                <a>
-                  Get Started <i className="fi-rs-arrow-right"></i>
-                </a>
+                Get Started<i className="fi-rs-arrow-right"></i>
+
               </Link>
             </div>
           </div>
@@ -62,7 +61,8 @@ const HomeBanner = () => {
               <Image
                 src="/assets/images/banner/banner-osft-sm-left.png"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={600}
                 height={334}
               />
@@ -74,9 +74,8 @@ const HomeBanner = () => {
                 Projects
               </h4>
               <Link href="/resources">
-                <a>
-                  Let's Go <i className="fi-rs-arrow-right"></i>
-                </a>
+                Let's Go<i className="fi-rs-arrow-right"></i>
+
               </Link>
             </div>
           </div>

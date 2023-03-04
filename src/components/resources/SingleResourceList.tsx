@@ -14,7 +14,7 @@ export interface ISingleResourceList {
   addToCompare?: any;
   addToWishlist?: any;
   openQuickView?: any;
-  resource?: IResource;
+  resource: IResource;
 }
 
 const SingleResourceList = ({
@@ -49,11 +49,14 @@ const SingleResourceList = ({
           <div className="product-img product-img-zoom">
             <div className="product-img-inner">
               <Link href="/resources/[slug]" as={`/resources/${resource.slug}`}>
-                <a>
-                  <img className="default-img" src={resource.images[0].img} alt="" />
-
-                  <img className="hover-img" src={resource.images[1].img} alt="" />
-                </a>
+                {resource.images ? (
+                  <>
+                    <img className="default-img" src={resource.images[0].img} alt="" />
+                    <img className="hover-img" src={resource.images[1].img} alt="" />
+                  </>
+                ) : (
+                  <></>
+                )}
               </Link>
             </div>
           </div>
@@ -86,24 +89,22 @@ const SingleResourceList = ({
           <div className="product-badges product-badges-position product-badges-mrg">
             {resource.trending && <span className="hot">Hot</span>}
             {resource.created && <span className="new">New</span>}
-            {resource.totalSell > 100 && <span className="best">Best Sell</span>}
-            {resource.discount.isActive && <span className="sale">Sale</span>}
-            {resource.discount.percentage >= 5 && (
-              <span className="hot">{resource.discount.percentage}%</span>
-            )}
+            {/*{resource.totalSell > 100 && <span className="best">Best Sell</span>}*/}
+            {/*{resource.discount.isActive && <span className="sale">Sale</span>}*/}
+            {/*{resource.discount.percentage >= 5 && (*/}
+            {/*  <span className="hot">{resource.discount.percentage}%</span>*/}
+            {/*)}*/}
           </div>
         </div>
 
         {/* Right Column Resource Description */}
         <div className="product-content-wrap">
           <div className="product-category">
-            <Link href="/src/pages">
-              <a>{resource.brand}</a>
-            </Link>
+            <Link href="/src/pages">{resource.brand}</Link>
           </div>
           <h2>
             <Link href="/resources/[slug]" as={`/resources/${resource.slug}`}>
-              <a>{resource.title}</a>
+              {resource.title}
             </Link>
           </h2>
           <div className="product-price">

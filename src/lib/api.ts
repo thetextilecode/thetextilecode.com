@@ -86,7 +86,7 @@ export function getAllTags(fields?: string[]): ITag[] {
 
   // if fields are not provided, just return them all
   if (fields) {
-    const filteredTags = [];
+    const filteredTags: any[] = [];
 
     tags.map((tag) => {
       let minimalTag = {};

@@ -29,9 +29,9 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
               feature == 'preview' ? (
                 <td className="row_img" key={i}>
                   {/*<div style={{ width: '100%' }}>*/}
-                  {/*<Image src={resource.images[0].img} layout={'fill'} alt={''} />*/}
+                  {/*<Image src={resource.images[0].img} fill alt={''} />*/}
                   <img src={resource.images[0].img} alt={''} />
-                  {/*<Image src={resource.images[0].img} layout={'responsive'} alt={''}*/}
+                  {/*<Image src={resource.images[0].img} sizes="100vw" style={{ width: '100%', height: 'auto' }} alt={''}*/}
                   {/*       width={resource.images[0].imgOriginalWidth} height={resource.images[0].imgOriginalHeight} />*/}
                   {/*</div>*/}
                 </td>
@@ -39,7 +39,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                 <td className="product_name" key={i}>
                   <h5>
                     <Link href={'/compare'}>
-                      <a>{resource.title}</a>
+                      {resource.title}
                     </Link>
                   </h5>
                 </td>
@@ -76,9 +76,9 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                     {resource.variations.map((item, i) => (
                       <li key={i}>
                         <Link href={'/#'}>
-                          <a>
-                            <span className={`product-color-${item}`}></span>
-                          </a>
+
+                          <span className={`product-color-${item}`}></span>
+
                         </Link>
                       </li>
                     ))}
@@ -108,7 +108,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                       Add to cart
                     </button>
                   ) : (
-                    <Link href="/contact">
+                    <Link href="/contact" legacyBehavior>
                       <button className="btn  btn-sm btn-secondary">
                         <i className="fi-rs-headset mr-5"></i>
                         Contact Us

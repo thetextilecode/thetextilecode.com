@@ -25,7 +25,7 @@ const FeaturedResourceSlider = ({ resources }: IFeaturedResourceSlider) => {
         }}
         className="custom-class"
       >
-        {resources.map((resource, i) => (
+        {resources?.map((resource, i) => (
           <SwiperSlide key={i}>
             <SingleResource resource={resource} />
           </SwiperSlide>

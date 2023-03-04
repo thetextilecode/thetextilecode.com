@@ -20,7 +20,7 @@ const QuickView = ({ quickView, closeQuickView }: IQuickView) => {
     customPaging: function (i) {
       return (
         <a>
-          <Image src={images[i].src} width={75} alt={''} layout={'fill'} />
+          <Image src={images[i].src} width={75} alt={''} fill />
         </a>
       );
     },

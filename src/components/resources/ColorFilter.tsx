@@ -38,7 +38,11 @@ const ColorFilter = ({ updateResourceFilters }: IColorFilter) => {
     <>
       <ul className="list-filter color-filter">
         {colors.map((tag, i) => (
-          <li className={active == i && 'active'} onClick={() => handleClick(i, tag.value)} key={i}>
+          <li
+            className={active == i ? 'active' : ''}
+            onClick={() => handleClick(i, tag.value)}
+            key={i}
+          >
             <a>{i == 0 ? 'All' : <span className={`product-color-${tag.value}`}></span>}</a>
           </li>
         ))}

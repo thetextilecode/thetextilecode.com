@@ -101,11 +101,14 @@ const ArticlePage = ({
                         <div className="single-header-meta">
                           <div className="entry-meta meta-1 font-xs mt-15 mb-15">
                             <span className="post-by">
-                              By <Link href="/#">{config.configBlog.author}</Link>
+                              By{' '}
+                              <Link href="/#" legacyBehavior>
+                                {config.configBlog.author}
+                              </Link>
                             </span>
                             <span className="post-on has-dot">
                               Published on{'  '}
-                              {format(parseISO(post.date), 'MMMM dd, yyyy')}
+                              {format(parseISO(post.date as string), 'MMMM dd, yyyy')}
                             </span>
                             {post.readTime && (
                               <span className="time-reading has-dot">
@@ -122,8 +125,8 @@ const ArticlePage = ({
                           <div style={{ width: '100%' }}>
                             <Image
                               src={post.image}
-                              alt={post?.imageAlt}
-                              layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
+                              alt={post?.imageAlt ?? ''}
+                              // layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
                               width={post?.imageOriginalWidth}
                               height={post?.imageOriginalHeight}
                             />
@@ -143,13 +146,13 @@ const ArticlePage = ({
                           {post.tags &&
                             post.tags.map((tag, idx) => {
                               return (
-                                <Link href={`/tag/${encodeURI(tag)}`} key={idx}>
-                                  <a
-                                    rel={'tag'}
-                                    className={'hover-up btn btn-sm btn-rounded mr-10'}
-                                  >
-                                    {tag}
-                                  </a>
+                                <Link
+                                  href={`/tag/${encodeURI(tag)}`}
+                                  key={idx}
+                                  rel={'tag'}
+                                  className={'hover-up btn btn-sm btn-rounded mr-10'}
+                                >
+                                  {tag}
                                 </Link>
                               );
                             })}
@@ -185,11 +188,11 @@ const ArticlePage = ({
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
+  const postFilePath = path.join(POSTS_PATH, `${params?.slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
-  data.slug = params.slug;
+  data.slug = params?.slug;
 
   const mdxSource = await serialize(content, {
     scope: data,

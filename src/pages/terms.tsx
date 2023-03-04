@@ -114,7 +114,7 @@ function Terms({ config, newsletterId, newsletterUser }) {
                   <p>
                     If you have any questions about these Terms, please{' '}
                     <Link href="/contact">
-                      <a>contact us</a>
+                      contact us
                     </Link>
                     .
                   </p>

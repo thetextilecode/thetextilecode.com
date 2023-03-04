@@ -1,6 +1,4 @@
 //1.FONT
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quando&display=swap');
-
 $font-heading: 'Quando', serif;
 $font-heading-italicized: 'Cedarville Cursive', cursive;
 $font-text: 'Lato', sans-serif;
@@ -14,24 +12,24 @@ $font-xl: 25px;
 $font-xxl: 42px;
 
 // Custom TTC colours
-$color-osft-beige-dark: #DDBEA9;
-$color-osft-beige-light: #F1E5E1;
-$color-osft-blue-light: #B6D0D2;
-$color-osft-blue-medium: #6FB1B6;
-$color-osft-blue-dark: #4A8489;
-$color-osft-grey-brown: #5D5A59;
-$color-osft-pink-light: #FFEEEE;
-$color-osft-pink-medium: #F8BBBC;
-$color-osft-pink-dark: #EC848B;
+$color-ttc-beige-dark: #DDBEA9;
+$color-ttc-beige-light: #F1E5E1;
+$color-ttc-blue-light: #B6D0D2;
+$color-ttc-blue-medium: #6FB1B6;
+$color-ttc-blue-dark: #4A8489;
+$color-ttc-grey-brown: #5D5A59;
+$color-ttc-pink-light: #FFEEEE;
+$color-ttc-pink-medium: #F8BBBC;
+$color-ttc-pink-dark: #EC848B;
 
 //2.COLOR
-$color-brand: $color-osft-blue-medium;
-$color-brand-dark: $color-osft-blue-dark;
-$color-primary: $color-osft-pink-dark;
-$color-secondary: $color-osft-beige-dark;
+$color-brand: $color-ttc-blue-medium;
+$color-brand-dark: $color-ttc-blue-dark;
+$color-primary: $color-ttc-pink-dark;
+$color-secondary: $color-ttc-beige-dark;
 $color-warning: #ffb300;
 $color-danger: #ff3551;
-$color-success: $color-osft-blue-medium;
+$color-success: $color-ttc-blue-medium;
 $color-info: #18a1b7;
 $color-text: #4f5d77;
 $color-heading: #5D5A59;

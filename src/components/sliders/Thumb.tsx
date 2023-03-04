@@ -36,7 +36,8 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
                 <Image
                   src={item.thumb}
                   alt="evara"
-                  layout="responsive"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
                   height={600}
                   width={600}
                   priority={true}
@@ -53,7 +54,7 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
           ))}
       </Swiper>
       <Swiper
-        onSwiper={setThumbsSwiper}
+        onSwiper={() => setThumbsSwiper}
         loop={true}
         spaceBetween={10}
         slidesPerView={4}
@@ -70,7 +71,8 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
                     <Image
                       src={item.thumb}
                       alt="The Textile Code"
-                      layout="responsive"
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
                       height={600}
                       width={600}
                     />
@@ -81,7 +83,8 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
               <Image
                 src={'/assets/images/page/placeholder.png'}
                 alt="The Textile Code"
-                layout="responsive"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 height={600}
                 width={600}
               />

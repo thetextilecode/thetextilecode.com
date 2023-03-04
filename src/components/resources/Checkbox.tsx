@@ -7,7 +7,7 @@ export interface ICheckbox {
 const CheckBox = ({ filters, handleCheckBox }: ICheckbox) => {
   return (
     <>
-      {filters.map((item, id) => (
+      {filters?.map((item, id) => (
         <>
           <input
             type="checkbox"

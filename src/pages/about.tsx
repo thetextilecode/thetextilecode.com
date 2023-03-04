@@ -37,10 +37,12 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
               <br />
 
               <p>
-                <Link href={'/contact'}>
-                  <a className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand text-hover-white border-radius-5 btn-shadow-brand hover-up">
+                <Link
+                  href={'/contact'}
+                  className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand text-hover-white border-radius-5 btn-shadow-brand hover-up">
+                  
                     Contact Me
-                  </a>
+                  
                 </Link>
               </p>
             </div>
@@ -48,7 +50,8 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
               <Image
                 src="/assets/images/page/cristofer-maximilian-t-shirt-unsplash.jpg"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={1500}
                 height={1000}
               />

@@ -19,15 +19,15 @@ function Custom404() {
               may have been removed.
               <br /> visit the
               <Link href='/src/pages'>
-                <a>
-                  <span> Homepage</span>
-                </a>
+
+                <span> Homepage</span>
+
               </Link>
               or
               <Link href='/src/pages/contact'>
-                <a>
-                  <span>Contact us</span>
-                </a>
+
+                <span>Contact us</span>
+
               </Link>
               about the problem
             </p>
@@ -48,10 +48,12 @@ function Custom404() {
                   </div>
                 </div>
               </div>
-              <Link href='/src/pages'>
-                <a className='btn btn-default submit-auto-width font-xs hover-up'>
+              <Link
+                href='/src/pages'
+                className='btn btn-default submit-auto-width font-xs hover-up'>
+                
                   Back To Home Page
-                </a>
+                
               </Link>
             </form>
           </div>

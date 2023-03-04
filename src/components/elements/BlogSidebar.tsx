@@ -37,10 +37,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
               {categories.map((category, idx) => {
                 return (
                   <li className={'cat-item cat-item-' + idx} key={idx}>
-                    <Link href={`/category/${category.value}`}>
-                      <a>{category.label}</a>
-                    </Link>{' '}
-                    {/*(3)*/}
+                    <Link href={`/category/${category.value}`}>{category.label}</Link>
                   </li>
                 );
               })}
@@ -68,25 +65,22 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                   <div className="post-thumb d-flex border-radius-5 img-hover-scale mb-15">
                     <Link href={`/${post.slug}`}>
                       <div style={{ width: '100%' }}>
-                        <a>
-                          <Image
-                            src={post.image}
-                            alt={post.imageAlt ?? ''}
-                            layout={'responsive'}
-                            width={post.imageOriginalWidth ?? 600}
-                            height={post.imageOriginalHeight ?? 400}
-                          />
-                        </a>
+                        <Image
+                          src={post.image as string}
+                          alt={post.imageAlt ?? ''}
+                          sizes="100vw"
+                          style={{ width: '100%', height: 'auto' }}
+                          width={post.imageOriginalWidth ?? 600}
+                          height={post.imageOriginalHeight ?? 400}
+                        />
                       </div>
                     </Link>
                   </div>
                   <div className="post-content media-body">
                     <h5 className="post-title mb-10 text-limit-2-row">
                       <Link href={`/${post.slug}`}>
-                        <>
-                          <a>{post.title}</a>
-                          {post.draft && <DraftBadge />}
-                        </>
+                        {post.title}
+                        {post.draft && <DraftBadge />}
                       </Link>
                     </h5>
                     {/*<div className='entry-meta meta-13 font-xxs color-grey'>*/}
@@ -111,7 +105,8 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
             <Image
               src="/assets/images/banner/banner-11.jpg"
               alt=""
-              layout={'responsive'}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
               width={600}
               height={687}
             />
@@ -123,9 +118,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
               Survey
             </h4>
             <Link href="/">
-              <a>
-                Take Survey <i className="fi-rs-arrow-right"></i>
-              </a>
+              Take Survey<i className="fi-rs-arrow-right"></i>
             </Link>
           </div>
         </div>
@@ -139,8 +132,8 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
           <div className="tagcloud">
             {tags.map((tag, idx) => {
               return (
-                <Link href={`/tag/${tag.value}`} key={idx}>
-                  <a className={'tag-cloud-link'}>{tag.value}</a>
+                <Link href={`/tag/${tag.value}`} key={idx} className={'tag-cloud-link'}>
+                  {tag.value}
                 </Link>
               );
             })}

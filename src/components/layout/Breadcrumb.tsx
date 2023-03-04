@@ -14,9 +14,9 @@ const Breadcrumb = ({ parent, sub, subChild, noBreadcrumb }: IBreadcrumb) => {
       <div className='container'>
         <div className='breadcrumb'>
           <Link href='/'>
-            <a>
-              {parent}
-            </a>
+
+            {parent}
+
           </Link>
           {sub && (<><span></span> {sub}</>)}
           {subChild && (<><span></span> {subChild}</>)}

@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/58786a3a-22f0-4464-af50-0286ea2c3bed/deploy-status)](https://app.netlify.com/sites/thetextilecode/deploys)
 
+Note: Typings are not yet fully implemented.
+
 ## Installation
 
 `yarn`

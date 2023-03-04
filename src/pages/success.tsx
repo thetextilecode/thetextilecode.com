@@ -21,10 +21,12 @@ function Success({ config, newsletterId, newsletterUser }) {
                 We'll get in contact with you as soon as we can.
               </p>
               <p className="wow fadeIn animated">
-                <Link href="/">
-                  <a className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up">
+                <Link
+                  href="/"
+                  className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up">
+                  
                     Home
-                  </a>
+                  
                 </Link>
               </p>
             </div>
