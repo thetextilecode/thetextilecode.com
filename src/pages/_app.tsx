@@ -11,14 +11,13 @@ import { useEffect, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { AppProps } from 'next/app';
-import localFont from 'next/font/local';
 // Swiper Slider
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Preloader from '../components/elements/Preloader';
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import Fonts from '../lib/fonts';
-import { Cedarville_Cursive, Lato, Quando } from 'next/font/google';
+// import { Cedarville_Cursive, Lato, Quando } from 'next/font/google';
 import {
   blogConfig,
   footerConfig,
@@ -53,34 +52,32 @@ export const event = ({ action, params }) => {
   window.gtag('event', action, params);
 };
 
-const evaraFont = localFont({ src: '../../public/assets/fonts/evara-font/evara-font.woff2' });
-
-const cedarvilleCursive = Cedarville_Cursive({
-  display: 'swap',
-  weight: ['400'],
-  subsets: ['latin'],
-});
-
-const lato = Lato({
-  display: 'fallback',
-  weight: ['100', '300', '400', '700', '900'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-});
-
-const quando = Quando({
-  display: 'block',
-  weight: ['400'],
-  subsets: ['latin'],
-});
+// const cedarvilleCursive = Cedarville_Cursive({
+//   display: 'swap',
+//   weight: ['400'],
+//   subsets: ['latin'],
+// });
+//
+// const lato = Lato({
+//   display: 'fallback',
+//   weight: ['100', '300', '400', '700', '900'],
+//   style: ['normal', 'italic'],
+//   subsets: ['latin'],
+// });
+//
+// const quando = Quando({
+//   display: 'block',
+//   weight: ['400'],
+//   subsets: ['latin'],
+// });
 
 function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: CustomAppProps) {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
 
-  // useEffect(() => {
-  //   Fonts();
-  // }, []);
+  useEffect(() => {
+    Fonts();
+  }, []);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -121,7 +118,7 @@ function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: C
                 config={config}
                 newsletterId={newsletterId}
                 newsletterUser={newsletterUser}
-                className={`${cedarvilleCursive.className} ${lato.className} ${quando.className}`}
+                // className={`${cedarvilleCursive.className} ${lato.className} ${quando.className}`}
                 // className={`${cedarvilleCursive.className}`}
                 {...pageProps}
               />
