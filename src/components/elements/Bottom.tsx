@@ -25,10 +25,8 @@ const Bottom = () => {
                   All Items
                 </h4>
                 <Link href="/products/shop-grid-right">
-                  <a>
-                    Shop Now
-                    <i className="fi-rs-arrow-right"></i>
-                  </a>
+                  Shop Now<i className="fi-rs-arrow-right"></i>
+
                 </Link>
               </div>
             </div>
@@ -39,22 +37,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-3.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-3.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Fish Print Patched T-shirt</a>
+                      Fish Print Patched T-shirt
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -66,22 +64,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-4.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-4.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Vintage Floral Print Dress</a>
+                      Vintage Floral Print Dress
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -93,22 +91,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-5.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-5.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Multi-color Stripe Circle Print T-Shirt</a>
+                      Multi-color Stripe Circle Print T-Shirt
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -125,22 +123,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-6.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-6.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Geometric Printed Long Sleeve Blosue</a>
+                      Geometric Printed Long Sleeve Blosue
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -152,22 +150,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-7.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-7.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Print Patchwork Maxi Dress</a>
+                      Print Patchwork Maxi Dress
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -179,22 +177,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-8.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-8.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Daisy Floral Print Straps Jumpsuit</a>
+                      Daisy Floral Print Straps Jumpsuit
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -211,22 +209,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-9.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-9.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Floral Print Casual Cotton Dress</a>
+                      Floral Print Casual Cotton Dress
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -238,22 +236,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-1.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-1.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Ruffled Solid Long Sleeve Blouse</a>
+                      Ruffled Solid Long Sleeve Blouse
                     </Link>
                   </h4>
                   <div className="product-price">
@@ -265,22 +263,22 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-                    <a>
-                      <Image
-                        src="/assets/images/shop/thumbnail-2.jpg"
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={600}
-                        height={600}
-                      />
-                    </a>
+
+                    <Image
+                      src="/assets/images/shop/thumbnail-2.jpg"
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={600}
+                      height={600}
+                    />
+
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
                     <Link href="/products/shop-grid-right">
-                      <a>Multi-color Print V-neck T-Shirt</a>
+                      Multi-color Print V-neck T-Shirt
                     </Link>
                   </h4>
                   <div className="product-price">

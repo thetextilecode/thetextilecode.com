@@ -102,7 +102,7 @@ const CartSidebar = ({
           Clear all
         </button>
       )}
-      <Link href="/cart">
+      <Link href="/cart" legacyBehavior>
         <div className="cart-popup-total">
           <span>Continue</span>
           <div className="amount">Total : {price()}</div>

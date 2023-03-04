@@ -18,7 +18,7 @@ const BlogSingle = ({ post }: IBlogSingle) => {
         <div className="single-header-meta">
           <div className="entry-meta meta-1 font-xs mt-15 mb-15">
             <span className="post-by">
-              By <Link href="/#">{blogConfig.author}</Link>
+              By <Link href="/#" legacyBehavior>{blogConfig.author}</Link>
             </span>
             <span className="post-on has-dot">{post.date}</span>
             <span className="time-reading has-dot">8 mins read</span>
@@ -47,15 +47,21 @@ const BlogSingle = ({ post }: IBlogSingle) => {
         style={{ visibility: 'visible', animationName: 'fadeIn' }}
       >
         <div className="tags w-50 w-sm-100">
-          <Link href="/blog-category-big">
-            <a rel="tag" className="hover-up btn btn-sm btn-rounded mr-10">
+          <Link
+            href="/blog-category-big"
+            rel="tag"
+            className="hover-up btn btn-sm btn-rounded mr-10">
+            
               deer
-            </a>
+            
           </Link>
-          <Link href="/blog-category-big">
-            <a rel="tag" className="hover-up btn btn-sm btn-rounded mr-10">
+          <Link
+            href="/blog-category-big"
+            rel="tag"
+            className="hover-up btn btn-sm btn-rounded mr-10">
+            
               nature
-            </a>
+            
           </Link>
         </div>
         <ShareIcons />

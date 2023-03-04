@@ -70,64 +70,62 @@ const CategorySlider = () => {
       imgOriginalHeight: 440,
     },
   ];
-  return (
-    <>
-      <Swiper
-        slidesPerView={6}
-        spaceBetween={20}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        navigation={{
-          prevEl: '.custom_prev_ct1',
-          nextEl: '.custom_next_ct1',
-        }}
-        className="custom-class"
-      >
-        {data.map((item, i) => (
-          <SwiperSlide key={i}>
-            <div className="card-1">
-              <figure className="img-hover-scale overflow-hidden">
-                <Link href="/products/shop-grid-right">
-                  <div style={{ width: '100%' }}>
-                    <a>
-                      <Image
-                        src={`/assets/images/shop/${item.img}`}
-                        alt=""
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={item.imgOriginalWidth}
-                        height={item.imgOriginalHeight}
-                      />
-                    </a>
-                  </div>
-                </Link>
-              </figure>
-              <h5>
-                <Link href="/products/shop-grid-right">
-                  <a>{item.title}</a>
-                </Link>
-              </h5>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+  return <>
+    <Swiper
+      slidesPerView={6}
+      spaceBetween={20}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      navigation={{
+        prevEl: '.custom_prev_ct1',
+        nextEl: '.custom_next_ct1',
+      }}
+      className="custom-class"
+    >
+      {data.map((item, i) => (
+        <SwiperSlide key={i}>
+          <div className="card-1">
+            <figure className="img-hover-scale overflow-hidden">
+              <Link href="/products/shop-grid-right" legacyBehavior>
+                <div style={{ width: '100%' }}>
+                  <a>
+                    <Image
+                      src={`/assets/images/shop/${item.img}`}
+                      alt=""
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={item.imgOriginalWidth}
+                      height={item.imgOriginalHeight}
+                    />
+                  </a>
+                </div>
+              </Link>
+            </figure>
+            <h5>
+              <Link href="/products/shop-grid-right">
+                {item.title}
+              </Link>
+            </h5>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
-      <div
-        className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
-        id="carousel-6-columns-arrows"
-      >
-        <span className="slider-btn slider-prev slick-arrow custom_prev_ct1">
-          <i className="fi-rs-angle-left"></i>
-        </span>
-        <span className="slider-btn slider-next slick-arrow custom_next_ct1">
-          <i className="fi-rs-angle-right"></i>
-        </span>
-      </div>
-    </>
-  );
+    <div
+      className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
+      id="carousel-6-columns-arrows"
+    >
+      <span className="slider-btn slider-prev slick-arrow custom_prev_ct1">
+        <i className="fi-rs-angle-left"></i>
+      </span>
+      <span className="slider-btn slider-next slick-arrow custom_next_ct1">
+        <i className="fi-rs-angle-right"></i>
+      </span>
+    </div>
+  </>;
 };
 
 export default CategorySlider;

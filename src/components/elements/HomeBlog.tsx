@@ -15,31 +15,31 @@ const HomeBlog = ({ latestPosts }: IHomeBlog) => {
           <article className='wow fadeIn animated' key={idx}>
             <div className='d-md-flex d-block'>
               <div className='post-thumb d-flex mr-15'>
-                <Link href={`/${post.slug}`}>
-                  <a className='color-white'>
-                    <img
-                      src={post.image}
-                      alt={post.imageAlt ?? 'Post thumbnail'}
-                    />
-                    {post.draft && (<h4 className={'entry-meta meta-2'}><DraftBadge /></h4>)}
-                  </a>
+                <Link href={`/${post.slug}`} className='color-white'>
+
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt ?? 'Post thumbnail'}
+                  />
+                  {post.draft && (<h4 className={'entry-meta meta-2'}><DraftBadge /></h4>)}
+
                 </Link>
               </div>
               <div className='post-content'>
                 <div className='entry-meta mb-10 mt-10'>
-                  <Link href={`/${post.slug}`}>
-                    <a className='entry-meta meta-2'>
-                      <span className='post-in font-x-small'>
-                        {post.category ?? 'Fashion'}
-                      </span>
-                    </a>
+                  <Link href={`/${post.slug}`} className='entry-meta meta-2'>
+
+                    <span className='post-in font-x-small'>
+                      {post.category ?? 'Fashion'}
+                    </span>
+
                   </Link>
                 </div>
                 <h4 className='post-title mb-25 text-limit-2-row'>
                   <Link href={`/${post.slug}`}>
-                    <a>
-                      {post.title}
-                    </a>
+
+                    {post.title}
+
                   </Link>
                 </h4>
                 <div className='entry-meta meta-1 font-xs color-grey mt-10 pb-10'>
@@ -52,13 +52,13 @@ const HomeBlog = ({ latestPosts }: IHomeBlog) => {
                     </span>
                   </div>
                   <Link href={`/${post.slug}`}>
-                    <a>Read More</a>
+                    Read More
                   </Link>
                 </div>
               </div>
             </div>
           </article>
-        )
+        );
       })}
     </div>
   );

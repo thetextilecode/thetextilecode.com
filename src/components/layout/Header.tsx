@@ -50,18 +50,14 @@ const Header = ({
                     {configHeader.top.showPhone && (
                       <li>
                         <i className="fi-rs-smartphone"></i>
-                        <Link href="/#">
-                          <a>{configInfo.phone}</a>
-                        </Link>
+                        <Link href="/#">{configInfo.phone}</Link>
                       </li>
                     )}
 
                     {configHeader.top.showLocation && (
                       <li>
                         <i className="fi-rs-marker"></i>
-                        <Link href="/contact">
-                          <a>Our location</a>
-                        </Link>
+                        <Link href="/contact">Our location</Link>
                       </li>
                     )}
                   </ul>
@@ -76,7 +72,7 @@ const Header = ({
                         <li>
                           {configHeader.top.newsflash.text}
                           <Link href={configHeader.top.newsflash.href}>
-                            <a>{configHeader.top.newsflash.callToAction}</a>
+                            {configHeader.top.newsflash.callToAction}
                           </Link>
                         </li>
                       </ul>
@@ -91,29 +87,24 @@ const Header = ({
                     {/* Languages */}
                     {configHeader.top.showLanguages && (
                       <li>
-                        <Link href="/#">
-                          <a className="language-dropdown-active">
-                            <i className="fi-rs-world"></i>
-                            English
-                            <i className="fi-rs-angle-small-down"></i>
-                          </a>
+                        <Link href="/#" className="language-dropdown-active">
+                          <i className="fi-rs-world"></i>English
+                          <i className="fi-rs-angle-small-down"></i>
                         </Link>
                         <ul className="language-dropdown">
                           {configLanguages.map((language, idx) => {
                             return (
                               <li key={idx}>
                                 <Link href={language.href ?? '/#'}>
-                                  <a>
-                                    <Image
-                                      src={language.flag}
-                                      alt={language.label}
-                                      sizes="100vw"
-                                      style={{ width: '100%', height: 'auto' }}
-                                      width={language.flagWidth}
-                                      height={language.flagHeight}
-                                    />
-                                    {language.label}
-                                  </a>
+                                  <Image
+                                    src={language.flag}
+                                    alt={language.label}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
+                                    width={language.flagWidth}
+                                    height={language.flagHeight}
+                                  />
+                                  {language.label}
                                 </Link>
                               </li>
                             );
@@ -125,9 +116,7 @@ const Header = ({
                     {configHeader.top.showLoginSignup && (
                       <li>
                         <i className="fi-rs-user"></i>
-                        <Link href="/">
-                          <a>Log In / Sign Up</a>
-                        </Link>
+                        <Link href="/">Log In / Sign Up</Link>
                       </li>
                     )}
                   </ul>
@@ -144,18 +133,16 @@ const Header = ({
               {/* Logo */}
               <div className="logo logo-width-1">
                 <Link href="/">
-                  <a>
-                    <div style={{ width: configInfo.logoWidth }}>
-                      <Image
-                        src={configInfo.logo}
-                        alt={configInfo.companyName + ' Logo'}
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        width={configInfo.logoWidth}
-                        height={configInfo.logoHeight}
-                      />
-                    </div>
-                  </a>
+                  <div style={{ width: configInfo.logoWidth }}>
+                    <Image
+                      src={configInfo.logo}
+                      alt={configInfo.companyName + ' Logo'}
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={configInfo.logoWidth}
+                      height={configInfo.logoHeight}
+                    />
+                  </div>
                 </Link>
               </div>
               <div className="header-right">
@@ -172,33 +159,29 @@ const Header = ({
                     <div className="header-action-2">
                       <div className="header-action-icon-2">
                         <Link href="/">
-                          <a>
-                            <Image
-                              className="svgInject"
-                              alt="Compare"
-                              src="/assets/images/theme/icons/icon-compare.svg"
-                              sizes="100vw"
-                              style={{ width: '100%', height: 'auto' }}
-                              width={25}
-                              height={25}
-                            />
-                            <span className="pro-count blue">{totalCompareItems}</span>
-                          </a>
+                          <Image
+                            className="svgInject"
+                            alt="Compare"
+                            src="/assets/images/theme/icons/icon-compare.svg"
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
+                            width={25}
+                            height={25}
+                          />
+                          <span className="pro-count blue">{totalCompareItems}</span>
                         </Link>
                       </div>
                       <div className="header-action-icon-2">
-                        <Link href="/">
-                          <a className="mini-cart-icon">
-                            <Image
-                              alt="Cart"
-                              src="/assets/images/theme/icons/icon-cart.svg"
-                              sizes="100vw"
-                              style={{ width: '100%', height: 'auto' }}
-                              width={25}
-                              height={25}
-                            />
-                            <span className="pro-count blue">{totalCartItems}</span>
-                          </a>
+                        <Link href="/" className="mini-cart-icon">
+                          <Image
+                            alt="Cart"
+                            src="/assets/images/theme/icons/icon-cart.svg"
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
+                            width={25}
+                            height={25}
+                          />
+                          <span className="pro-count blue">{totalCartItems}</span>
                         </Link>
                       </div>
                     </div>
@@ -222,7 +205,23 @@ const Header = ({
               {/* Logo */}
               <div className="logo logo-width-1 d-block d-lg-none">
                 <Link href="/">
-                  <a>
+                  <div style={{ margin: '0.8em 0', width: '250px' }}>
+                    <Image
+                      src={configInfo.logo}
+                      alt={configInfo.companyName + ' Logo'}
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      width={configInfo.logoWidth}
+                      height={configInfo.logoHeight}
+                    />
+                  </div>
+                </Link>
+              </div>
+
+              <div className="header-nav d-none d-lg-flex flex-fill">
+                {/* Logo */}
+                <div className="main-category-wrap d-none d-lg-block logo logo-width-1">
+                  <Link href="/">
                     <div style={{ margin: '0.8em 0', width: '250px' }}>
                       <Image
                         src={configInfo.logo}
@@ -233,26 +232,6 @@ const Header = ({
                         height={configInfo.logoHeight}
                       />
                     </div>
-                  </a>
-                </Link>
-              </div>
-
-              <div className="header-nav d-none d-lg-flex flex-fill">
-                {/* Logo */}
-                <div className="main-category-wrap d-none d-lg-block logo logo-width-1">
-                  <Link href="/">
-                    <a>
-                      <div style={{ margin: '0.8em 0', width: '250px' }}>
-                        <Image
-                          src={configInfo.logo}
-                          alt={configInfo.companyName + ' Logo'}
-                          sizes="100vw"
-                          style={{ width: '100%', height: 'auto' }}
-                          width={configInfo.logoWidth}
-                          height={configInfo.logoHeight}
-                        />
-                      </div>
-                    </a>
                   </Link>
                 </div>
 
@@ -274,10 +253,7 @@ const Header = ({
                       <ul>
                         <li className="has-children">
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-dress"></i>
-                              Women's Clothing
-                            </a>
+                            <i className="evara-font-dress"></i>Women's Clothing
                           </Link>
                           <div className="dropdown-menu">
                             <ul className="mega-menu d-lg-flex">
@@ -289,57 +265,43 @@ const Header = ({
                                         <span className="submenu-title">Hot & Trending</span>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Dresses</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Dresses
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Blouses & Shirts
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Blouses & Shirts
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Hoodies & Sweatshirts
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Hoodies & Sweatshirts
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Women's Sets
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Women's Sets
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Suits & Blazers
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Suits & Blazers
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Bodysuits
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Bodysuits
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Tanks & Camis
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Tanks & Camis
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Coats & Jackets
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Coats & Jackets
                                         </Link>
                                       </li>
                                     </ul>
@@ -350,53 +312,43 @@ const Header = ({
                                         <span className="submenu-title">Bottoms</span>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Leggings
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Leggings
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Skirts</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Skirts
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Shorts</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Shorts
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Jeans</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Jeans
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Pants & Capris
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Pants & Capris
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Bikini Sets
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Bikini Sets
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Cover-Ups
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Cover-Ups
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Swimwear
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Swimwear
                                         </Link>
                                       </li>
                                     </ul>
@@ -416,9 +368,7 @@ const Header = ({
                                   <div className="banner_infoConfig">
                                     <h6>10% Off</h6>
                                     <h4>New Arrival</h4>
-                                    <Link href="/#">
-                                      <a>Shop now</a>
-                                    </Link>
+                                    <Link href="/#">Shop now</Link>
                                   </div>
                                 </div>
                                 <div className="header-banner2">
@@ -433,9 +383,7 @@ const Header = ({
                                   <div className="banner_infoConfig">
                                     <h6>15% Off</h6>
                                     <h4>Hot Deals</h4>
-                                    <Link href="/#">
-                                      <a>Shop now</a>
-                                    </Link>
+                                    <Link href="/#">Shop now</Link>
                                   </div>
                                 </div>
                               </li>
@@ -444,10 +392,7 @@ const Header = ({
                         </li>
                         <li className="has-children">
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-tshirt"></i>
-                              Men's Clothing
-                            </a>
+                            <i className="evara-font-tshirt"></i>Men's Clothing
                           </Link>
                           <div className="dropdown-menu">
                             <ul className="mega-menu d-lg-flex">
@@ -459,53 +404,43 @@ const Header = ({
                                         <span className="submenu-title">Jackets & Coats</span>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Down Jackets
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Down Jackets
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Jackets</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Jackets
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Parkas</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Parkas
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Faux Leather Coats
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Faux Leather Coats
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Trench</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Trench
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Wool & Blends
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Wool & Blends
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Vests & Waistcoats
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Vests & Waistcoats
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Leather Coats
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Leather Coats
                                         </Link>
                                       </li>
                                     </ul>
@@ -516,46 +451,38 @@ const Header = ({
                                         <span className="submenu-title">Suits & Blazers</span>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Blazers</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Blazers
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Suit Jackets
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Suit Jackets
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Suit Pants
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Suit Pants
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Suits</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Suits
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">Vests</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Vests
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Tailor-made Suits
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Tailor-made Suits
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Cover-Ups
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Cover-Ups
                                         </Link>
                                       </li>
                                     </ul>
@@ -575,9 +502,7 @@ const Header = ({
                                   <div className="banner_infoConfig">
                                     <h6>10% Off</h6>
                                     <h4>New Arrival</h4>
-                                    <Link href="/#">
-                                      <a>Shop now</a>
-                                    </Link>
+                                    <Link href="/#">Shop now</Link>
                                   </div>
                                 </div>
                               </li>
@@ -586,10 +511,7 @@ const Header = ({
                         </li>
                         <li className="has-children">
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-smartphone"></i>
-                              Cellphones
-                            </a>
+                            <i className="evara-font-smartphone"></i>Cellphones
                           </Link>
                           <div className="dropdown-menu">
                             <ul className="mega-menu d-lg-flex">
@@ -601,57 +523,43 @@ const Header = ({
                                         <span className="submenu-title">Hot & Trending</span>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Cellphones
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Cellphones
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">iPhones</a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          iPhones
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Refurbished Phones
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Refurbished Phones
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Mobile Phone
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Mobile Phone
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Mobile Phone Parts
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Mobile Phone Parts
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Phone Bags & Cases
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Phone Bags & Cases
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Communication Equipments
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Communication Equipments
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Walkie Talkie
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Walkie Talkie
                                         </Link>
                                       </li>
                                     </ul>
@@ -662,59 +570,43 @@ const Header = ({
                                         <span className="submenu-title">Accessories</span>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Screen Protectors
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Screen Protectors
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Wire Chargers
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Wire Chargers
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Wireless Chargers
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Wireless Chargers
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Car Chargers
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Car Chargers
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Power Bank
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Power Bank
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Armbands
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Armbands
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Dust Plug
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Dust Plug
                                         </Link>
                                       </li>
                                       <li>
-                                        <Link href="/#">
-                                          <a className="dropdown-item nav-link nav_item">
-                                            Signal Boosters
-                                          </a>
+                                        <Link href="/#" className="dropdown-item nav-link nav_item">
+                                          Signal Boosters
                                         </Link>
                                       </li>
                                     </ul>
@@ -734,9 +626,7 @@ const Header = ({
                                   <div className="banner_infoConfig">
                                     <h6>10% Off</h6>
                                     <h4>New Arrival</h4>
-                                    <Link href="/#">
-                                      <a>Shop now</a>
-                                    </Link>
+                                    <Link href="/#">Shop now</Link>
                                   </div>
                                 </div>
                                 <div className="header-banner2">
@@ -751,9 +641,7 @@ const Header = ({
                                   <div className="banner_infoConfig">
                                     <h6>15% Off</h6>
                                     <h4>Hot Deals</h4>
-                                    <Link href="/#">
-                                      <a>Shop now</a>
-                                    </Link>
+                                    <Link href="/#">Shop now</Link>
                                   </div>
                                 </div>
                               </li>
@@ -762,92 +650,59 @@ const Header = ({
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-desktop"></i>
-                              Computer & Office
-                            </a>
+                            <i className="evara-font-desktop"></i>Computer & Office
                           </Link>
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-cpu"></i>
-                              Consumer Electronics
-                            </a>
+                            <i className="evara-font-cpu"></i>Consumer Electronics
                           </Link>
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-diamond"></i>
-                              Jewelry & Accessories
-                            </a>
+                            <i className="evara-font-diamond"></i>Jewelry & Accessories
                           </Link>
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-home"></i>
-                              Home & Garden
-                            </a>
+                            <i className="evara-font-home"></i>Home & Garden
                           </Link>
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-high-heels"></i>
-                              Shoes
-                            </a>
+                            <i className="evara-font-high-heels"></i>Shoes
                           </Link>
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-teddy-bear"></i>
-                              Mother & Kids
-                            </a>
+                            <i className="evara-font-teddy-bear"></i>Mother & Kids
                           </Link>
                         </li>
                         <li>
                           <Link href="/">
-                            <a>
-                              <i className="evara-font-kite"></i>
-                              Outdoor fun
-                            </a>
+                            <i className="evara-font-kite"></i>Outdoor fun
                           </Link>
                         </li>
                         <li>
                           <ul className="more_slide_open" style={{ display: 'none' }}>
                             <li>
                               <Link href="/">
-                                <a>
-                                  <i className="evara-font-desktop"></i>
-                                  Beauty, Health
-                                </a>
+                                <i className="evara-font-desktop"></i>Beauty, Health
                               </Link>
                             </li>
                             <li>
                               <Link href="/">
-                                <a>
-                                  <i className="evara-font-cpu"></i>
-                                  Bags and Shoes
-                                </a>
+                                <i className="evara-font-cpu"></i>Bags and Shoes
                               </Link>
                             </li>
                             <li>
                               <Link href="/">
-                                <a>
-                                  <i className="evara-font-diamond"></i>
-                                  Consumer Electronics
-                                </a>
+                                <i className="evara-font-diamond"></i>Consumer Electronics
                               </Link>
                             </li>
                             <li>
                               <Link href="/">
-                                <a>
-                                  <i className="evara-font-home"></i>
-                                  Automobiles & Motorcycles
-                                </a>
+                                <i className="evara-font-home"></i>Automobiles & Motorcycles
                               </Link>
                             </li>
                           </ul>
@@ -881,17 +736,15 @@ const Header = ({
                   {configHeader.bottom.showIconCompare && (
                     <div className="header-action-icon-2">
                       <Link href="/saved">
-                        <a>
-                          <Image
-                            alt="Compare Items"
-                            src="/assets/images/theme/icons/icon-compare.svg"
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                            width={25}
-                            height={25}
-                          />
-                          <span className="pro-count white">{totalCompareItems}</span>
-                        </a>
+                        <Image
+                          alt="Compare Items"
+                          src="/assets/images/theme/icons/icon-compare.svg"
+                          sizes="100vw"
+                          style={{ width: '100%', height: 'auto' }}
+                          width={25}
+                          height={25}
+                        />
+                        <span className="pro-count white">{totalCompareItems}</span>
                       </Link>
                     </div>
                   )}
@@ -899,58 +752,50 @@ const Header = ({
                   {configHeader.bottom.showIconSaved && (
                     <div className="header-action-icon-2">
                       <Link href="/saved">
-                        <a>
-                          <Image
-                            alt="Saved Items"
-                            src="/assets/images/theme/icons/icon-heart.svg"
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                            width={25}
-                            height={25}
-                          />
-                          <span className="pro-count white">{totalSavedItems}</span>
-                        </a>
+                        <Image
+                          alt="Saved Items"
+                          src="/assets/images/theme/icons/icon-heart.svg"
+                          sizes="100vw"
+                          style={{ width: '100%', height: 'auto' }}
+                          width={25}
+                          height={25}
+                        />
+                        <span className="pro-count white">{totalSavedItems}</span>
                       </Link>
                     </div>
                   )}
 
                   {configHeader.bottom.showIconCart && (
                     <div className="header-action-icon-2">
-                      <Link href="/">
-                        <a className="mini-cart-icon">
-                          <Image
-                            alt="The Textile Code"
-                            src="/assets/images/theme/icons/icon-cart.svg"
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                            width={25}
-                            height={25}
-                          />
-                          <span className="pro-count white">{totalCartItems}</span>
-                        </a>
+                      <Link href="/" className="mini-cart-icon">
+                        <Image
+                          alt="The Textile Code"
+                          src="/assets/images/theme/icons/icon-cart.svg"
+                          sizes="100vw"
+                          style={{ width: '100%', height: 'auto' }}
+                          width={25}
+                          height={25}
+                        />
+                        <span className="pro-count white">{totalCartItems}</span>
                       </Link>
                       <div className="cart-dropdown-wrap cart-dropdown-hm2">
                         <ul>
                           <li>
                             <div className="shopping-cart-img">
                               <Link href="/">
-                                <a>
-                                  <Image
-                                    alt="Cart"
-                                    src="/assets/images/shop/thumbnail-3.jpg"
-                                    sizes="100vw"
-                                    style={{ width: '100%', height: 'auto' }}
-                                    width={600}
-                                    height={600}
-                                  />
-                                </a>
+                                <Image
+                                  alt="Cart"
+                                  src="/assets/images/shop/thumbnail-3.jpg"
+                                  sizes="100vw"
+                                  style={{ width: '100%', height: 'auto' }}
+                                  width={600}
+                                  height={600}
+                                />
                               </Link>
                             </div>
                             <div className="shopping-cart-title">
                               <h4>
-                                <Link href="/">
-                                  <a>Plain Striola Shirts</a>
-                                </Link>
+                                <Link href="/">Plain Striola Shirts</Link>
                               </h4>
                               <h3>
                                 <span>1 × </span>
@@ -959,32 +804,26 @@ const Header = ({
                             </div>
                             <div className="shopping-cart-delete">
                               <Link href="/#">
-                                <a>
-                                  <i className="fi-rs-cross-small"></i>
-                                </a>
+                                <i className="fi-rs-cross-small"></i>
                               </Link>
                             </div>
                           </li>
                           <li>
                             <div className="shopping-cart-img">
                               <Link href="/">
-                                <a>
-                                  <Image
-                                    alt="The Textile Code"
-                                    src="/assets/images/shop/thumbnail-4.jpg"
-                                    sizes="100vw"
-                                    style={{ width: '100%', height: 'auto' }}
-                                    width={600}
-                                    height={600}
-                                  />
-                                </a>
+                                <Image
+                                  alt="The Textile Code"
+                                  src="/assets/images/shop/thumbnail-4.jpg"
+                                  sizes="100vw"
+                                  style={{ width: '100%', height: 'auto' }}
+                                  width={600}
+                                  height={600}
+                                />
                               </Link>
                             </div>
                             <div className="shopping-cart-title">
                               <h4>
-                                <Link href="/">
-                                  <a>Macbook Pro 2022</a>
-                                </Link>
+                                <Link href="/">Macbook Pro 2022</Link>
                               </h4>
                               <h3>
                                 <span>1 × </span>
@@ -993,9 +832,7 @@ const Header = ({
                             </div>
                             <div className="shopping-cart-delete">
                               <Link href="/#">
-                                <a>
-                                  <i className="fi-rs-cross-small"></i>
-                                </a>
+                                <i className="fi-rs-cross-small"></i>
                               </Link>
                             </div>
                           </li>
@@ -1008,12 +845,8 @@ const Header = ({
                             </h4>
                           </div>
                           <div className="shopping-cart-button">
-                            <Link href="/">
-                              <a>View cart</a>
-                            </Link>
-                            <Link href="/">
-                              <a>Checkout</a>
-                            </Link>
+                            <Link href="/">View cart</Link>
+                            <Link href="/">Checkout</Link>
                           </div>
                         </div>
                       </div>

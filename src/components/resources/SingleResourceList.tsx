@@ -49,11 +49,10 @@ const SingleResourceList = ({
           <div className="product-img product-img-zoom">
             <div className="product-img-inner">
               <Link href="/resources/[slug]" as={`/resources/${resource.slug}`}>
-                <a>
-                  <img className="default-img" src={resource.images[0].img} alt="" />
 
-                  <img className="hover-img" src={resource.images[1].img} alt="" />
-                </a>
+                <img className="default-img" src={resource.images[0].img} alt="" />
+                <img className="hover-img" src={resource.images[1].img} alt="" />
+
               </Link>
             </div>
           </div>
@@ -98,12 +97,12 @@ const SingleResourceList = ({
         <div className="product-content-wrap">
           <div className="product-category">
             <Link href="/src/pages">
-              <a>{resource.brand}</a>
+              {resource.brand}
             </Link>
           </div>
           <h2>
             <Link href="/resources/[slug]" as={`/resources/${resource.slug}`}>
-              <a>{resource.title}</a>
+              {resource.title}
             </Link>
           </h2>
           <div className="product-price">

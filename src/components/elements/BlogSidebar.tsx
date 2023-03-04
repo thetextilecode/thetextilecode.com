@@ -38,7 +38,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                 return (
                   <li className={'cat-item cat-item-' + idx} key={idx}>
                     <Link href={`/category/${category.value}`}>
-                      <a>{category.label}</a>
+                      {category.label}
                     </Link>{' '}
                     {/*(3)*/}
                   </li>
@@ -66,7 +66,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                   key={idx}
                 >
                   <div className="post-thumb d-flex border-radius-5 img-hover-scale mb-15">
-                    <Link href={`/${post.slug}`}>
+                    <Link href={`/${post.slug}`} legacyBehavior>
                       <div style={{ width: '100%' }}>
                         <a>
                           <Image
@@ -83,7 +83,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                   </div>
                   <div className="post-content media-body">
                     <h5 className="post-title mb-10 text-limit-2-row">
-                      <Link href={`/${post.slug}`}>
+                      <Link href={`/${post.slug}`} legacyBehavior>
                         <>
                           <a>{post.title}</a>
                           {post.draft && <DraftBadge />}
@@ -125,9 +125,8 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
               Survey
             </h4>
             <Link href="/">
-              <a>
-                Take Survey <i className="fi-rs-arrow-right"></i>
-              </a>
+              Take Survey<i className="fi-rs-arrow-right"></i>
+
             </Link>
           </div>
         </div>
@@ -141,8 +140,8 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
           <div className="tagcloud">
             {tags.map((tag, idx) => {
               return (
-                <Link href={`/tag/${tag.value}`} key={idx}>
-                  <a className={'tag-cloud-link'}>{tag.value}</a>
+                <Link href={`/tag/${tag.value}`} key={idx} className={'tag-cloud-link'}>
+                  {tag.value}
                 </Link>
               );
             })}

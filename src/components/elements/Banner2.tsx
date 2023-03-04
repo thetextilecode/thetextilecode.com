@@ -21,10 +21,9 @@ const Banner2 = () => {
           Authorised Service Provider
         </h1>
 
-        <Link href="/index">
-          <a className="btn">
-            Learn More <i className="fi-rs-arrow-right"></i>
-          </a>
+        <Link href="/index" className="btn">
+          Learn More<i className="fi-rs-arrow-right"></i>
+
         </Link>
       </div>
     </div>

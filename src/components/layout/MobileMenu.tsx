@@ -61,14 +61,14 @@ const MobileMenu = ({
           <div className="mobile-header-logo">
             {/* MOBILE LOGO */}
             <Link href="/index">
-              <a>
-                <Image
-                  src="/assets/images/logo/logo-combined-clear-sm.png"
-                  alt="logo"
-                  width={250}
-                  height={68}
-                />
-              </a>
+
+              <Image
+                src="/assets/images/logo/logo-combined-clear-sm.png"
+                alt="logo"
+                width={250}
+                height={68}
+              />
+
             </Link>
           </div>
 
@@ -98,83 +98,67 @@ const MobileMenu = ({
             {/* BROWSE CATEGORIES */}
             {configMobile.showCategories && (
               <div className="main-category-wrap mobile-header-border">
-                <Link href="src/components/layout/MobileMenu#">
-                  <a className="category-button-active-2">
-                    <span className="fi-rs-apps"></span> Browse Categories
-                  </a>
+                <Link
+                  href="src/components/layout/MobileMenu#"
+                  className="category-button-active-2">
+
+                  <span className="fi-rs-apps"></span>Browse Categories
                 </Link>
                 <div className="category-dropdown-wrap category-dropdown-active-small">
                   <ul>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-dress"></i>
-                          Women's Clothing
-                        </a>
+
+                        <i className="evara-font-dress"></i>Women's Clothing
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-tshirt"></i>
-                          Men's Clothing
-                        </a>
+
+                        <i className="evara-font-tshirt"></i>Men's Clothing
                       </Link>
                     </li>
                     <li>
                       {' '}
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-smartphone"></i> Cellphones
-                        </a>
+
+                        <i className="evara-font-smartphone"></i>Cellphones
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-desktop"></i>
-                          Computer & Office
-                        </a>
+
+                        <i className="evara-font-desktop"></i>Computer & Office
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-cpu"></i>
-                          Consumer Electronics
-                        </a>
+
+                        <i className="evara-font-cpu"></i>Consumer Electronics
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-home"></i>
-                          Home & Garden
-                        </a>
+
+                        <i className="evara-font-home"></i>Home & Garden
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-high-heels"></i>
-                          Shoes
-                        </a>
+
+                        <i className="evara-font-high-heels"></i>Shoes
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-teddy-bear"></i>
-                          Mother & Kids
-                        </a>
+
+                        <i className="evara-font-teddy-bear"></i>Mother & Kids
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/shop-grid-right">
-                        <a>
-                          <i className="evara-font-kite"></i>
-                          Outdoor fun
-                        </a>
+
+                        <i className="evara-font-kite"></i>Outdoor fun
                       </Link>
                     </li>
                   </ul>
@@ -202,7 +186,7 @@ const MobileMenu = ({
                         </span>
                       )}
                       <Link href={item.href}>
-                        <a>{item.title}</a>
+                        {item.title}
                       </Link>
                       <ul className={isActive.key == newIdx ? 'dropdown' : 'd-none'}>
                         {item.children && (
@@ -211,7 +195,7 @@ const MobileMenu = ({
                               return (
                                 <li key={idx}>
                                   <Link href={child.href}>
-                                    <a>{child.title}</a>
+                                    {child.title}
                                   </Link>
                                 </li>
                               );
@@ -233,33 +217,33 @@ const MobileMenu = ({
                       <i className="fi-rs-angle-small-down"></i>
                     </span>
                     <Link href="src/components/layout/MobileMenu#">
-                      <a>Mega menu</a>
+                      Mega menu
                     </Link>
                     <ul className={isActive.key == 3 ? 'dropdown' : 'd-none'}>
                       <li className="menu-item-has-children">
                         <span className="menu-expand"></span>
                         <Link href="src/components/layout/MobileMenu#">
-                          <a>Women's Fashion</a>
+                          Women's Fashion
                         </Link>
                         <ul className="dropdown">
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Dresses</a>
+                              Dresses
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Blouses & Shirts</a>
+                              Blouses & Shirts
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Hoodies & Sweatshirts</a>
+                              Hoodies & Sweatshirts
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Women's Sets</a>
+                              Women's Sets
                             </Link>
                           </li>
                         </ul>
@@ -267,22 +251,22 @@ const MobileMenu = ({
                       <li className="menu-item-has-children">
                         <span className="menu-expand"></span>
                         <Link href="src/components/layout/MobileMenu#">
-                          <a>Men's Fashion</a>
+                          Men's Fashion
                         </Link>
                         <ul className="dropdown">
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Jackets</a>
+                              Jackets
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Casual Faux Leather</a>
+                              Casual Faux Leather
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Genuine Leather</a>
+                              Genuine Leather
                             </Link>
                           </li>
                         </ul>
@@ -290,32 +274,32 @@ const MobileMenu = ({
                       <li className="menu-item-has-children">
                         <span className="menu-expand"></span>
                         <Link href="src/components/layout/MobileMenu#">
-                          <a>Technology</a>
+                          Technology
                         </Link>
                         <ul className="dropdown">
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Gaming Laptops</a>
+                              Gaming Laptops
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Ultraslim Laptops</a>
+                              Ultraslim Laptops
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Tablets</a>
+                              Tablets
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Laptop Accessories</a>
+                              Laptop Accessories
                             </Link>
                           </li>
                           <li>
                             <Link href="/products/shop-grid-right">
-                              <a>Tablet Accessories</a>
+                              Tablet Accessories
                             </Link>
                           </li>
                         </ul>
@@ -336,17 +320,17 @@ const MobileMenu = ({
             <div className="mobile-header-info-wrap mobile-header-border">
               <div className="single-mobile-header-info mt-30">
                 <Link href="/contact">
-                  <a> Our location </a>
+                   Our location 
                 </Link>
               </div>
               <div className="single-mobile-header-info">
                 <Link href="/login-register">
-                  <a>Log In / Sign Up </a>
+                  Log In / Sign Up 
                 </Link>
               </div>
               <div className="single-mobile-header-info">
                 <Link href="src/components/layout/MobileMenu#">
-                  <a>{configInfo.phone}</a>
+                  {configInfo.phone}
                 </Link>
               </div>
             </div>
