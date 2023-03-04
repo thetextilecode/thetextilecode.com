@@ -23,8 +23,8 @@
     "fontfaceobserver": "^2.3.0",
     "isomorphic-unfetch": "^4.0.2",
     "next": "12.1.6",
-    "next-mdx-remote": "^4.3.0",
-    "next-sitemap": "^3.1.54",
+    "next-mdx-remote": "^4.4.1",
+    "next-sitemap": "^4.0.1",
     "react": "17.0.2",
     "react-bootstrap": "^2.7.2",
     "react-content-loader": "^6.0.3",
@@ -46,7 +46,7 @@
     "select2": "^4.1.0-rc.0",
     "sharp": "^0.31.3",
     "slick-carousel": "^1.8.1",
-    "swiper": "^9.0.5",
+    "swiper": "^9.1.0",
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "eslint": "8.35.0",
-    "eslint-config-next": "13.2.1",
+    "eslint-config-next": "13.2.3",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gray-matter": "^4.0.3",
