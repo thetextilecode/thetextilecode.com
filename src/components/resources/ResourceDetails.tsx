@@ -135,7 +135,8 @@ const ResourceDetails = ({
                           className="border-radius-10"
                           src="/assets/images/banner/banner-4.png"
                           alt=""
-                          layout={'responsive'}
+                          sizes="100vw"
+                          style={{ width: '100%', height: 'auto' }}
                           width={1320}
                           height={300}
                         />

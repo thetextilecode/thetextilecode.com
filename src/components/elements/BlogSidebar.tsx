@@ -72,7 +72,8 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                           <Image
                             src={post.image}
                             alt={post.imageAlt ?? ''}
-                            layout={'responsive'}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
                             width={post.imageOriginalWidth ?? 600}
                             height={post.imageOriginalHeight ?? 400}
                           />
@@ -111,7 +112,8 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
             <Image
               src="/assets/images/banner/banner-11.jpg"
               alt=""
-              layout={'responsive'}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
               width={600}
               height={687}
             />

@@ -48,7 +48,8 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
               <Image
                 src="/assets/images/page/cristofer-maximilian-t-shirt-unsplash.jpg"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={1500}
                 height={1000}
               />

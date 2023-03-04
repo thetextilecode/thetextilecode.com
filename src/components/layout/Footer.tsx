@@ -76,7 +76,8 @@ const Footer = ({
                     src={configInfo.logoIllustration}
                     width={configInfo.logoIllustrationWidth}
                     height={configInfo.logoIllustrationHeight}
-                    layout={'responsive'}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
                     alt={configInfo.companyName + ' logo'}
                   />
                 </div>

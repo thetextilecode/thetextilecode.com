@@ -110,7 +110,7 @@ const Resources = ({
               {/*      <Image*/}
               {/*        src="/assets/images/page/placeholder.png"*/}
               {/*        alt="#"*/}
-              {/*        layout={'responsive'}*/}
+              {/*        sizes="100vw" style={{ width: '100%', height: 'auto' }}*/}
               {/*        width={600}*/}
               {/*        height={600}*/}
               {/*      />*/}

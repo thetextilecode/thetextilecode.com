@@ -6,7 +6,13 @@ import Link from 'next/link';
 SwiperCore.use([Navigation, Autoplay]);
 
 const CategorySlider = () => {
-  const data: { id: number, title: string, img: string, imgOriginalWidth: number, imgOriginalHeight: number }[] = [
+  const data: {
+    id: number;
+    title: string;
+    img: string;
+    imgOriginalWidth: number;
+    imgOriginalHeight: number;
+  }[] = [
     {
       id: 1,
       title: 'T-Shirt',
@@ -78,19 +84,20 @@ const CategorySlider = () => {
           prevEl: '.custom_prev_ct1',
           nextEl: '.custom_next_ct1',
         }}
-        className='custom-class'
+        className="custom-class"
       >
         {data.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className='card-1'>
-              <figure className='img-hover-scale overflow-hidden'>
-                <Link href='/products/shop-grid-right'>
+            <div className="card-1">
+              <figure className="img-hover-scale overflow-hidden">
+                <Link href="/products/shop-grid-right">
                   <div style={{ width: '100%' }}>
                     <a>
                       <Image
                         src={`/assets/images/shop/${item.img}`}
-                        alt=''
-                        layout={'responsive'}
+                        alt=""
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                         width={item.imgOriginalWidth}
                         height={item.imgOriginalHeight}
                       />
@@ -99,7 +106,7 @@ const CategorySlider = () => {
                 </Link>
               </figure>
               <h5>
-                <Link href='/products/shop-grid-right'>
+                <Link href="/products/shop-grid-right">
                   <a>{item.title}</a>
                 </Link>
               </h5>
@@ -109,14 +116,14 @@ const CategorySlider = () => {
       </Swiper>
 
       <div
-        className='slider-arrow slider-arrow-2 carousel-6-columns-arrow'
-        id='carousel-6-columns-arrows'
+        className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
+        id="carousel-6-columns-arrows"
       >
-        <span className='slider-btn slider-prev slick-arrow custom_prev_ct1'>
-          <i className='fi-rs-angle-left'></i>
+        <span className="slider-btn slider-prev slick-arrow custom_prev_ct1">
+          <i className="fi-rs-angle-left"></i>
         </span>
-        <span className='slider-btn slider-next slick-arrow custom_next_ct1'>
-          <i className='fi-rs-angle-right'></i>
+        <span className="slider-btn slider-next slick-arrow custom_next_ct1">
+          <i className="fi-rs-angle-right"></i>
         </span>
       </div>
     </>

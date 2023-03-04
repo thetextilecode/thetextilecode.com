@@ -11,7 +11,8 @@ const HomeBanner = () => {
               <Image
                 src="/assets/images/banner/banner-osft-left.png"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={600}
                 height={712}
               />
@@ -39,7 +40,8 @@ const HomeBanner = () => {
               <Image
                 src="/assets/images/banner/banner-osft-sm-right.png"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={600}
                 height={334}
               />
@@ -62,7 +64,8 @@ const HomeBanner = () => {
               <Image
                 src="/assets/images/banner/banner-osft-sm-left.png"
                 alt=""
-                layout={'responsive'}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
                 width={600}
                 height={334}
               />

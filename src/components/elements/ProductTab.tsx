@@ -215,7 +215,8 @@ const ProductTab = () => {
                             <Image
                               src="/assets/images/page/avatar-6.jpg"
                               alt=""
-                              layout={'responsive'}
+                              sizes="100vw"
+                              style={{ width: '100%', height: 'auto' }}
                               width={850}
                               height={850}
                             />
@@ -258,7 +259,8 @@ const ProductTab = () => {
                             <Image
                               src="/assets/images/page/avatar-7.jpg"
                               alt=""
-                              layout={'responsive'}
+                              sizes="100vw"
+                              style={{ width: '100%', height: 'auto' }}
                               width={850}
                               height={850}
                             />
@@ -301,7 +303,8 @@ const ProductTab = () => {
                             <Image
                               src="/assets/images/page/avatar-8.jpg"
                               alt=""
-                              layout={'responsive'}
+                              sizes="100vw"
+                              style={{ width: '100%', height: 'auto' }}
                               width={850}
                               height={850}
                             />

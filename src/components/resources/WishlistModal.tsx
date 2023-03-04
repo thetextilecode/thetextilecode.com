@@ -61,13 +61,7 @@ const WishlistModal = ({
                 {wishlist.items.map((resource, i: number) => (
                   <tr key={i}>
                     <td>
-                      <Image
-                        src={resource.image}
-                        alt=""
-                        className="img-fluid"
-                        width="70"
-                        layout={'fill'}
-                      />
+                      <Image src={resource.image} alt="" className="img-fluid" width="70" fill />
                     </td>
 
                     <td>${resource.price}</td>

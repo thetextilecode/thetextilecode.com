@@ -45,7 +45,8 @@ const HomeSlider = () => {
                       src="/assets/images/slider/laptop.png"
                       alt={'photo of woman holding fabric, displayed in a laptop frame'}
                       priority={true}
-                      layout={'responsive'}
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
                       width={1000}
                       height={613}
                     />

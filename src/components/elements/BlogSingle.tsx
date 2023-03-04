@@ -33,7 +33,7 @@ const BlogSingle = ({ post }: IBlogSingle) => {
             <Image
               src={post.image}
               alt={post.imageAlt ?? null}
-              layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
+              // layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
               width={post.imageOriginalWidth ?? null}
               height={post.imageOriginalHeight ?? null}
             />

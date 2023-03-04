@@ -123,7 +123,7 @@ const ArticlePage = ({
                             <Image
                               src={post.image}
                               alt={post?.imageAlt}
-                              layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
+                              // layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
                               width={post?.imageOriginalWidth}
                               height={post?.imageOriginalHeight}
                             />

@@ -107,7 +107,8 @@ const Header = ({
                                     <Image
                                       src={language.flag}
                                       alt={language.label}
-                                      layout={'responsive'}
+                                      sizes="100vw"
+                                      style={{ width: '100%', height: 'auto' }}
                                       width={language.flagWidth}
                                       height={language.flagHeight}
                                     />
@@ -148,7 +149,8 @@ const Header = ({
                       <Image
                         src={configInfo.logo}
                         alt={configInfo.companyName + ' Logo'}
-                        layout={'responsive'}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                         width={configInfo.logoWidth}
                         height={configInfo.logoHeight}
                       />
@@ -175,7 +177,8 @@ const Header = ({
                               className="svgInject"
                               alt="Compare"
                               src="/assets/images/theme/icons/icon-compare.svg"
-                              layout={'responsive'}
+                              sizes="100vw"
+                              style={{ width: '100%', height: 'auto' }}
                               width={25}
                               height={25}
                             />
@@ -189,7 +192,8 @@ const Header = ({
                             <Image
                               alt="Cart"
                               src="/assets/images/theme/icons/icon-cart.svg"
-                              layout={'responsive'}
+                              sizes="100vw"
+                              style={{ width: '100%', height: 'auto' }}
                               width={25}
                               height={25}
                             />
@@ -223,7 +227,8 @@ const Header = ({
                       <Image
                         src={configInfo.logo}
                         alt={configInfo.companyName + ' Logo'}
-                        layout={'responsive'}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}
                         width={configInfo.logoWidth}
                         height={configInfo.logoHeight}
                       />
@@ -241,7 +246,8 @@ const Header = ({
                         <Image
                           src={configInfo.logo}
                           alt={configInfo.companyName + ' Logo'}
-                          layout={'responsive'}
+                          sizes="100vw"
+                          style={{ width: '100%', height: 'auto' }}
                           width={configInfo.logoWidth}
                           height={configInfo.logoHeight}
                         />
@@ -402,7 +408,8 @@ const Header = ({
                                   <Image
                                     src="/assets/images/banner/menu-banner-2.jpg"
                                     alt="menu_banner1"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={370}
                                     height={200}
                                   />
@@ -418,7 +425,8 @@ const Header = ({
                                   <Image
                                     src="/assets/images/banner/menu-banner-3.jpg"
                                     alt="menu_banner2"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={370}
                                     height={200}
                                   />
@@ -559,7 +567,8 @@ const Header = ({
                                   <Image
                                     src="/assets/images/banner/menu-banner-4.jpg"
                                     alt="menu_banner1"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={1320}
                                     height={300}
                                   />
@@ -717,7 +726,8 @@ const Header = ({
                                   <Image
                                     src="/assets/images/banner/menu-banner-5.jpg"
                                     alt="menu_banner1"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={370}
                                     height={200}
                                   />
@@ -733,7 +743,8 @@ const Header = ({
                                   <Image
                                     src="/assets/images/banner/menu-banner-6.jpg"
                                     alt="menu_banner2"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={370}
                                     height={200}
                                   />
@@ -874,7 +885,8 @@ const Header = ({
                           <Image
                             alt="Compare Items"
                             src="/assets/images/theme/icons/icon-compare.svg"
-                            layout="responsive"
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
                             width={25}
                             height={25}
                           />
@@ -891,7 +903,8 @@ const Header = ({
                           <Image
                             alt="Saved Items"
                             src="/assets/images/theme/icons/icon-heart.svg"
-                            layout="responsive"
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
                             width={25}
                             height={25}
                           />
@@ -908,7 +921,8 @@ const Header = ({
                           <Image
                             alt="The Textile Code"
                             src="/assets/images/theme/icons/icon-cart.svg"
-                            layout="responsive"
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
                             width={25}
                             height={25}
                           />
@@ -924,7 +938,8 @@ const Header = ({
                                   <Image
                                     alt="Cart"
                                     src="/assets/images/shop/thumbnail-3.jpg"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={600}
                                     height={600}
                                   />
@@ -957,7 +972,8 @@ const Header = ({
                                   <Image
                                     alt="The Textile Code"
                                     src="/assets/images/shop/thumbnail-4.jpg"
-                                    layout={'responsive'}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }}
                                     width={600}
                                     height={600}
                                   />
