@@ -31,7 +31,8 @@ const Footer = ({
         <section className="section-padding footer-mid">
           <div className="container pt-15 pb-20">
             <div className="row">
-              <div className="col-lg-5 col-md-6">
+              {/* COLUMN 1 */}
+              <div className="col-lg-3 col-md-3">
                 <div className="widget-about font-md mb-md-5 mb-lg-0">
                   <h5 className="widget-title wow fadeIn animated">Contact</h5>
                   <p className="wow fadeIn animated">
@@ -48,7 +49,9 @@ const Footer = ({
                   />
                 </div>
               </div>
-              <div className="col-lg-5 col-md-5">
+
+              {/* COLUMN 2 */}
+              <div className="col-lg-3 col-md-4">
                 <h5 className="widget-title wow fadeIn animated">Info</h5>
                 <ul className="footer-list wow fadeIn animated mb-sm-5 mb-md-0">
                   <li>
@@ -67,7 +70,20 @@ const Footer = ({
                   </li>
                 </ul>
               </div>
-              <div className="col-lg-2 col-md-1">
+
+              {/* COLUMN 3 */}
+              <div className="col-lg-3 col-md-4">
+                <br />
+                <br />
+                <img
+                  src="https://api.thegreenwebfoundation.org/greencheckimage/www.thetextilecode.com?nocache=true"
+                  alt="This website is hosted Green - checked by thegreenwebfoundation.org"
+                  style={{ maxWidth: '60%' }}
+                />
+              </div>
+
+              {/* COLUMN 4 */}
+              <div className="col-lg-3 col-md-1">
                 <div
                   className="logo logo-width-1 wow fadeIn animated mx-auto"
                   style={{ width: '120px', margin: '1.5em 0.5em' }}

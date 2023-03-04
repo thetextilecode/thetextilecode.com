@@ -6,9 +6,6 @@ import Header from './Header';
 import MobileMenu from './MobileMenu';
 import { IMenu, IMetaProps } from '../../../types';
 import { useRouter } from 'next/router';
-import { Cedarville_Cursive, Lato, Quando } from 'next/font/google';
-// import { Quando } from 'next/font/google';
-import Script from 'next/script';
 
 export interface ILayout {
   children?: ReactNode;
