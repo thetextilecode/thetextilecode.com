@@ -22,7 +22,7 @@
     "date-fns": "^2.29.3",
     "fontfaceobserver": "^2.3.0",
     "isomorphic-unfetch": "^4.0.2",
-    "next": "^13.2.3",
+    "next": "^13.2.4",
     "next-mdx-remote": "^4.4.1",
     "next-sitemap": "^4.0.5",
     "react": "^18.2.0",
@@ -50,7 +50,7 @@
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
-    "@types/node": "^18.14.6",
+    "@types/node": "^18.15.3",
     "@types/react": "18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
@@ -62,7 +62,7 @@
     "prettier": "^2.8.4",
     "sass": "^1.59.3",
     "sass-loader": "^13.2.0",
-    "typescript": "^4.9.5",
+    "typescript": "^5.0.2",
     "webpack": "^5.76.2"
   }
 }
