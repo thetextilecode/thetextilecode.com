@@ -56,12 +56,12 @@
     "@typescript-eslint/parser": "^5.55.0",
     "eslint": "8.42.0",
     "eslint-config-next": "^13.2.4",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gray-matter": "^4.0.3",
     "prettier": "^2.8.8",
     "sass": "^1.59.3",
-    "sass-loader": "^13.2.0",
+    "sass-loader": "^13.3.2",
     "typescript": "^5.0.2",
     "webpack": "^5.76.2"
   }
