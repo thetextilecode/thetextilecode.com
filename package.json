@@ -22,7 +22,7 @@
     "date-fns": "^2.30.0",
     "fontfaceobserver": "^2.3.0",
     "isomorphic-unfetch": "^4.0.2",
-    "next": "^13.4.19",
+    "next": "^13.5.1",
     "next-mdx-remote": "^4.4.1",
     "next-sitemap": "^4.2.3",
     "react": "^18.2.0",
@@ -50,7 +50,7 @@
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
-    "@types/node": "^20.6.2",
+    "@types/node": "^20.6.3",
     "@types/react": "18.2.22",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
