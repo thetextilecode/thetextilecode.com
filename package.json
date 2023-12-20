@@ -57,7 +57,7 @@
     "eslint": "8.50.0",
     "eslint-config-next": "^13.5.3",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.1.0",
     "gray-matter": "^4.0.3",
     "prettier": "^3.0.3",
     "sass": "^1.68.0",
