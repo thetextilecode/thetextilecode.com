@@ -1,6 +1,6 @@
 import { CSSProperties, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs } from 'swiper';
+import { Navigation, Thumbs } from 'swiper/modules';
 import 'swiper/css/thumbs';
 // import Zoom from 'react-img-zoom';
 import Image from 'next/image';

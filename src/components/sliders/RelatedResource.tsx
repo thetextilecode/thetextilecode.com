@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 import { fetchByCategory } from '../../redux/action/resource';
 import SingleResource from '../resources/SingleResource';

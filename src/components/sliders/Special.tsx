@@ -1,12 +1,11 @@
-import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-SwiperCore.use([Navigation]);
+import { Navigation } from "swiper/modules";
 
 const SpecialSlider = () => {
     return (
         <>
             <Swiper
+                modules={[Navigation]}
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}

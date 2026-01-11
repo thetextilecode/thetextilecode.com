@@ -135,7 +135,7 @@ const ArticlePage = ({
                       )}
 
                       <div className="single-content">
-                        <MDXRemote {...source} components={components} />
+                        <MDXRemote {...source} components={components as any} />
                       </div>
 
                       <div
