@@ -4082,10 +4082,10 @@ react@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
 
-reactstrap@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-9.2.0.tgz#3bde2b2e39e91962676167ac60edea89f8584382"
-  integrity sha512-WWLTEG00qYav0E55PorWHReYTkz5IqkVmQNy0h6U81yqjSp9fOLFGV5pYSVeAUz+yRhU/RTE0oAWy22zr6sOIw==
+reactstrap@^9.2.1:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-9.2.1.tgz#498aa1355cfa620f6812b98a92cc8e54155d4383"
+  integrity sha512-3d+jo7EEw1GxobrSeTjs+Vq1SNrMnRTcwKp3/t1ufrceTLFHS6LpAck4eLKlzvgQgTpSJpLeJtVQKSqkxbHTiQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@popperjs/core" "^2.6.0"
@@ -5063,10 +5063,10 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.88.2:
-  version "5.88.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.88.2.tgz#f62b4b842f1c6ff580f3fcb2ed4f0b579f4c210e"
-  integrity sha512-JmcgNZ1iKj+aiR0OvTYtWQqJwq37Pf683dY9bVORwVbUrDhLhdn/PlO2sHsFHPkj7sHNQF3JwaAkp49V+Sq1tQ==
+webpack@^5.89.0:
+  version "5.89.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.89.0.tgz#56b8bf9a34356e93a6625770006490bf3a7f32dc"
+  integrity sha512-qyfIC10pOr70V+jkmud8tMfajraGCZMBWJtrmuBymQKCrLTRejBI8STDp1MCyZu/QTdZSeacCQYpYNQVOzX5kw==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^1.0.0"
