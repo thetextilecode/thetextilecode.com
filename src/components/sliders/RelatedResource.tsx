@@ -1,10 +1,8 @@
-import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
 import { useEffect, useState } from 'react';
 import { fetchByCategory } from '../../redux/action/resource';
 import SingleResource from '../resources/SingleResource';
-
-SwiperCore.use([Navigation]);
 
 export interface IRelatedSlider {
   related?: any;
@@ -37,6 +35,7 @@ const RelatedSlider = ({}: IRelatedSlider) => {
   return (
     <>
       <Swiper
+        modules={[Navigation]}
         slidesPerView={4}
         spaceBetween={30}
         loop={true}
