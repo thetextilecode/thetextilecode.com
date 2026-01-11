@@ -112,7 +112,7 @@ const ArticlePage = ({
                             </span>
                             {post.readTime && (
                               <span className="time-reading has-dot">
-                                {post.readTime} min{post.readTime < 0 ?? 's'} read
+                                {post.readTime} min{post.readTime !== 1 ? 's' : ''} read
                               </span>
                             )}
                             {/*<span className='hit-count  has-dot'>29k Views</span>*/}

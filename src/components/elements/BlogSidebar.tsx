@@ -88,7 +88,7 @@ const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: I
                     {/*    {format(parseISO(post.date), 'MMMM dd, yyyy')}*/}
                     {/*  </span>*/}
                     {/*  <span className='hit-count has-dot '>*/}
-                    {/*    {post.readTime} min{post.readTime < 0 ?? 's'} read*/}
+                    {/*    {post.readTime} min{post.readTime !== 1 ? 's' : ''} read*/}
                     {/*  </span>*/}
                     {/*</div>*/}
                   </div>
