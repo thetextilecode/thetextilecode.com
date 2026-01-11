@@ -1,14 +1,13 @@
-import SwiperCore, { Navigation, Pagination } from 'swiper';
-import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/pagination';
 import Link from 'next/link';
 import Image from 'next/image';
-
-SwiperCore.use([Navigation, Pagination]);
 
 const HomeSlider = () => {
   return <>
     <Swiper
+      modules={[Navigation, Pagination]}
       slidesPerView={1}
       spaceBetween={0}
       loop={true}

@@ -1,11 +1,9 @@
 import { CSSProperties, useState } from 'react';
-import SwiperCore, { Navigation, Thumbs } from 'swiper';
-import 'swiper/css/thumbs';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Thumbs } from 'swiper/modules';
+import 'swiper/css/thumbs';
 // import Zoom from 'react-img-zoom';
 import Image from 'next/image';
-
-SwiperCore.use([Navigation, Thumbs]);
 
 export interface IThumbSlider {
   resource?: any;
@@ -17,6 +15,7 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
   return (
     <div>
       <Swiper
+        modules={[Navigation, Thumbs]}
         style={
           {
             '--swiper-navigation-color': '#fff',
@@ -54,6 +53,7 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
           ))}
       </Swiper>
       <Swiper
+        modules={[Thumbs]}
         onSwiper={() => setThumbsSwiper}
         loop={true}
         spaceBetween={10}

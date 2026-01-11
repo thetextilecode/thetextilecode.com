@@ -1,8 +1,6 @@
-import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import SingleResource from '../resources/SingleResource';
-
-SwiperCore.use([Navigation]);
 
 export interface IFeaturedResourceSlider {
   featured?: any[];
@@ -13,6 +11,7 @@ const FeaturedResourceSlider = ({ resources }: IFeaturedResourceSlider) => {
   return (
     <>
       <Swiper
+        modules={[Navigation]}
         slidesPerView={4}
         spaceBetween={30}
         grid={{

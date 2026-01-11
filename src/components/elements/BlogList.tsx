@@ -45,7 +45,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
                   {format(parseISO(post.date!), 'MMMM dd, yyyy')}
                 </span>
                 <span className="hit-count has-dot">
-                  {post.readTime} min{post.readTime! < 0 ?? 's'} read
+                  {post.readTime ?? 1} min read
                 </span>
               </div>
               <Link href={`/${post.slug}`} className="text-brand">

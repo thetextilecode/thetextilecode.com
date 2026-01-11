@@ -1,8 +1,6 @@
-import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
-
-SwiperCore.use([Navigation]);
 
 const BrandSlider = () => {
   const data: { id: number, img: string }[] = [
@@ -35,6 +33,7 @@ const BrandSlider = () => {
   return (
     <>
       <Swiper
+        modules={[Navigation]}
         slidesPerView={6}
         spaceBetween={20}
         loop={true}
