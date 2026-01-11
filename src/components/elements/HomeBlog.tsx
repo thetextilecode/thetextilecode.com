@@ -37,7 +37,7 @@ const HomeBlog = ({ latestPosts }: IHomeBlog) => {
                   <div>
                     <span className="post-on">{format(parseISO(post.date!), 'MMMM dd, yyyy')}</span>
                     <span className="hit-count has-dot">
-                      {post.readTime} min{post.readTime! < 0 ?? 's'} read
+                      {post.readTime} min{post.readTime !== 1 ? 's' : ''} read
                     </span>
                   </div>
                   <Link href={`/${post.slug}`}>Read More</Link>
