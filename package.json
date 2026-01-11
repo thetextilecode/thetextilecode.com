@@ -13,7 +13,6 @@
     "lint-staged": "npm run lint:fix && npm run format:fix",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "sass": "sass -w public/assets/sass/main.scss:public/assets/css/main.css",
     "typecheck": "tsc",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui"
@@ -63,8 +62,6 @@
     "eslint-plugin-prettier": "^5.0.0",
     "gray-matter": "^4.0.3",
     "prettier": "^3.0.3",
-    "sass": "^1.68.0",
-    "sass-loader": "^13.3.2",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0"
   }
