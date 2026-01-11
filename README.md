@@ -6,26 +6,26 @@ Note: Typings are not yet fully implemented.
 
 ## Installation
 
-`yarn`
+`npm install`
 
 ## Build & Run
 
-`yarn build`
-`yarn start`
+`npm run build`
+`npm start`
 
 ## Development
 
-`yarn dev`
+`npm run dev`
 
 Please do not modify the `next-env.d.ts` file. It ensures Next.js types are picked up by the TypeScript compiler. If you need to add an interface please add it to `types.d.ts`.
 
 ## Other Commands
 
 Lint:
-`yarn lint`
+`npm run lint`
 
 Sass:
-`yarn sass`
+`npm run sass`
 
 ## Components
 
