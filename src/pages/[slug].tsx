@@ -57,7 +57,7 @@ const ArticlePage = ({
   posts,
   source,
   tags,
-}: ArticlePageProps): JSX.Element => {
+}: ArticlePageProps) => {
   const customMeta: IMetaProps = {
     title: `${post.title} | ${config.configSite.title}`,
     description: post.description,
