@@ -14,13 +14,7 @@ type TagPageProps = {
   tag: ITag;
 };
 
-const TagPage = ({
-  config,
-  newsletterUser,
-  newsletterId,
-  posts,
-  tag,
-}: TagPageProps): JSX.Element => {
+const TagPage = ({ config, newsletterUser, newsletterId, posts, tag }: TagPageProps) => {
   return (
     <Layout
       parent="Home"

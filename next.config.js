@@ -1,6 +1,7 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
-  experimental: {
-    appDir: true,
-    fontLoaders: [{ loader: 'next/font/google', options: { subsets: ['latin'] } }],
+  eslint: {
+    // Skip ESLint during builds - run separately via npm run lint
+    ignoreDuringBuilds: true,
   },
 };

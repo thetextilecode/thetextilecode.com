@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const BannerFeatures = () => {
-  const data: { id: number, title: string, img: string, color: string }[] = [
+  const data: { id: number; title: string; img: string; color: string }[] = [
     {
       id: 1,
       title: 'Free Shipping',
@@ -43,14 +43,9 @@ const BannerFeatures = () => {
   return (
     <>
       {data.map((item, i) => (
-        <div className='col-lg-2 col-md-4 mb-md-3 mb-lg-0' key={i}>
-          <div className='banner-features wow fadeIn animated hover-up'>
-            <Image
-              src={`/assets/images/theme/icons/${item.img}`}
-              alt=''
-              width={152}
-              height={105}
-            />
+        <div className="col-lg-2 col-md-4 mb-md-3 mb-lg-0" key={i}>
+          <div className="banner-features wow fadeIn animated hover-up">
+            <Image src={`/assets/images/theme/icons/${item.img}`} alt="" width={152} height={105} />
             <h4 className={item.color}>{item.title}</h4>
           </div>
         </div>

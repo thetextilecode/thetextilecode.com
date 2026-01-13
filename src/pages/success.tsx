@@ -23,10 +23,9 @@ function Success({ config, newsletterId, newsletterUser }) {
               <p className="wow fadeIn animated">
                 <Link
                   href="/"
-                  className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up">
-                  
-                    Home
-                  
+                  className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up"
+                >
+                  Home
                 </Link>
               </p>
             </div>

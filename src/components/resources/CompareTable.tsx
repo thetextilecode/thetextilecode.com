@@ -38,9 +38,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
               ) : feature == 'name' ? (
                 <td className="product_name" key={i}>
                   <h5>
-                    <Link href={'/compare'}>
-                      {resource.title}
-                    </Link>
+                    <Link href={'/compare'}>{resource.title}</Link>
                   </h5>
                 </td>
               ) : feature == 'price' ? (
@@ -76,9 +74,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                     {resource.variations.map((item, i) => (
                       <li key={i}>
                         <Link href={'/#'}>
-
                           <span className={`product-color-${item}`}></span>
-
                         </Link>
                       </li>
                     ))}
