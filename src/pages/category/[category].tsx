@@ -19,7 +19,7 @@ const CategoryPage = ({
   newsletterUser,
   newsletterId,
   posts,
-}: CategoryPageProps): JSX.Element => {
+}: CategoryPageProps) => {
   return (
     <Layout
       parent="Home"
