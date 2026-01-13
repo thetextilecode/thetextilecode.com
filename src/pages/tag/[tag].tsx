@@ -20,7 +20,7 @@ const TagPage = ({
   newsletterId,
   posts,
   tag,
-}: TagPageProps): JSX.Element => {
+}: TagPageProps) => {
   return (
     <Layout
       parent="Home"

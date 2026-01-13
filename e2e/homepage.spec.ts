@@ -11,7 +11,7 @@ test.describe('Homepage', () => {
     expect(await hasNextJsErrorOverlay(page)).toBe(false);
 
     // Verify the page loads with the correct title
-    await expect(page).toHaveTitle(/Open Threads/);
+    await expect(page).toHaveTitle(/The Textile Code/);
 
     // Verify the header is present
     const header = page.locator('header');

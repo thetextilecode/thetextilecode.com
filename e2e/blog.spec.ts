@@ -11,7 +11,7 @@ test.describe('Blog Page', () => {
     expect(await hasNextJsErrorOverlay(page)).toBe(false);
 
     // Verify the page loads and has blog-related content
-    await expect(page).toHaveTitle(/Open Threads/);
+    await expect(page).toHaveTitle(/The Textile Code/);
 
     // Fail if there are any console errors
     const errors = getErrors();
