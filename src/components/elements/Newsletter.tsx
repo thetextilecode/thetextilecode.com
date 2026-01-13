@@ -2,6 +2,16 @@ import Image from 'next/image';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { useState } from 'react';
 
+/**
+ * Sanitize message by stripping HTML tags to prevent XSS attacks.
+ * Mailchimp messages may contain HTML that could be malicious.
+ */
+const sanitizeMessage = (message: string | null): string => {
+  if (!message) return '';
+  // Strip HTML tags to get plain text, preventing XSS
+  return message.replace(/<[^>]*>/g, '');
+};
+
 const CustomForm = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState('');
 
@@ -18,6 +28,9 @@ const CustomForm = ({ status, message, onValidated }) => {
       });
   };
 
+  // Sanitize the message to prevent XSS
+  const safeMessage = sanitizeMessage(message);
+
   return (
     <form
       className="mc__form form-subscriber d-flex wow fadeIn animated"
@@ -25,13 +38,10 @@ const CustomForm = ({ status, message, onValidated }) => {
     >
       {status === 'sending' && <div className="mc__alert mc__alert--sending">sending...</div>}
       {status === 'error' && (
-        <div className="mc__alert mc__alert--error" dangerouslySetInnerHTML={{ __html: message }} />
+        <div className="mc__alert mc__alert--error">{safeMessage}</div>
       )}
       {status === 'success' && (
-        <div
-          className="mc__alert mc__alert--success"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
+        <div className="mc__alert mc__alert--success">{safeMessage}</div>
       )}
       {status !== 'success' ? (
         <div className="mc__field-container">
