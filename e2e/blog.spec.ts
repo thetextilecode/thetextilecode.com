@@ -5,7 +5,7 @@ test.describe('Blog Page', () => {
     await page.goto('/blog');
 
     // Verify the page loads and has blog-related content
-    await expect(page).toHaveTitle(/The Textile Code/);
+    await expect(page).toHaveTitle(/OpenThreads/);
   });
 
   test('should navigate to blog from homepage', async ({ page }) => {

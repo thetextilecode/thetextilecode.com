@@ -1,7 +1,7 @@
 const dev = process.env.NODE_ENV !== 'production';
 import { ICategory, IConfigMobile, ITag } from './types';
 
-export const server = dev ? 'http://localhost:3000' : 'https://thetextilecode.com';
+export const server = dev ? 'http://localhost:3000' : 'https://openthreads.dev';
 
 export const blogConfig = {
   author: 'Rachel Yordán',
@@ -110,12 +110,12 @@ export const postTags: ITag[] = [
 
 export const siteConfig = {
   favicon: '/favicon.ico',
-  url: 'https://www.thetextilecode.com',
-  title: 'The Textile Code | fashion, technology, and sustainability',
+  url: 'https://www.openthreads.dev',
+  title: 'OpenThreads | fashion, technology, and sustainability',
   description:
     'Technology in the age of sustainability, zeroing in on the fashion and textiles industry.',
   shareImage: '/assets/images/logo/screenshot.png',
-  shareImageAlt: 'The Textile Code',
+  shareImageAlt: 'OpenThreads',
 };
 
 export const homeConfig = {
@@ -169,10 +169,10 @@ export const infoConfig = {
   addressLine1: '71-75, Shelton Street',
   addressLine2: 'Covent Garden',
   addressPostcode: 'WC2H 9JQ',
-  companyName: 'The Textile Code',
+  companyName: 'OpenThreads',
   companiesHouseNumber: '14083675',
-  copyright: 'Copyright 2023 © The Textile Code',
-  email: 'hello@thetextilecode.com',
+  copyright: 'Copyright 2023 © OpenThreads',
+  email: 'hello@openthreads.dev',
   hours: '10:00 - 18:00, Mon - Sat',
   logo: '/assets/images/logo/logo.png',
   logoIllustration: '/assets/images/logo/illustration-light-sm.png',
@@ -228,25 +228,25 @@ export const mobileConfig: IConfigMobile = {
 };
 
 export const seoConfig = {
-  meta_og_title: 'The Textile Code',
+  meta_og_title: 'OpenThreads',
   meta_og_type: 'website',
   // meta_twitter_card: 'summary',
-  meta_og_url: 'https://www.thetextilecode.com',
+  meta_og_url: 'https://www.openthreads.dev',
   meta_og_description:
     'A fresh outlook on how technology can help us be more sustainable, with a focus on the fashion and textiles' +
     ' industry, from the perspective of a software engineer and formerly unsustainable consumer.',
   meta_og_image: '',
   meta_twitter_card: 'summary_large_image',
-  meta_twitter_site: '@thetextilecode',
-  meta_twitter_creator: '@thetextilecode',
+  meta_twitter_site: '@openthreadsdev',
+  meta_twitter_creator: '@openthreadsdev',
 };
 
 export const socialConfig = {
-  facebook: 'thetextilecode',
-  github: 'thetextilecode',
-  instagram: 'thetextilecode',
-  pinterest: 'thetextilecode',
-  twitter: 'thetextilecode',
+  facebook: 'openthreadsdev',
+  github: 'openthreadsdev',
+  instagram: 'openthreadsdev',
+  pinterest: 'openthreadsdev',
+  twitter: 'openthreadsdev',
   // youtube: ''
 };
 

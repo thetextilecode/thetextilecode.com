@@ -1,6 +1,6 @@
-# thetextilecode.com
+# openthreads.dev
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/58786a3a-22f0-4464-af50-0286ea2c3bed/deploy-status)](https://app.netlify.com/sites/thetextilecode/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58786a3a-22f0-4464-af50-0286ea2c3bed/deploy-status)](https://app.netlify.com/sites/openthreads/deploys)
 
 Note: Typings are not yet fully implemented.
 

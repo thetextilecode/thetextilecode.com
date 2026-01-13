@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.thetextilecode.com
+Host: https://www.openthreads.dev
 
 # Sitemaps
-Sitemap: https://www.thetextilecode.com/sitemap.xml
+Sitemap: https://www.openthreads.dev/sitemap.xml

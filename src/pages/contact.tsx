@@ -51,7 +51,7 @@ function Contact({ config, newsletterId, newsletterUser }) {
                   We're a small team, so it might take a few days to get back to you, but we will as
                   soon as we can.
                   <br />
-                  Alternatively, send us an email at hello[at]thetextilecode.com (replace [at] with @).
+                  Alternatively, send us an email at hello[at]openthreads.dev (replace [at] with @).
                 </p>
                 <NetlifyForm name="Contact" action="/success" honeypotName="bot-field">
                   {({ handleChange, success, error }) => (

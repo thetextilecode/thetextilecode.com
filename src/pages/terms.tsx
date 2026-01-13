@@ -22,7 +22,7 @@ function Terms({ config, newsletterId, newsletterUser }) {
                   <p>
                     {' '}
                     Please read these Terms of Service (“Terms”, “Terms of Service”) carefully
-                    before using the https://thetextilecode.com website (the “Service”) operated by
+                    before using the https://openthreads.dev website (the "Service") operated by
                     Open Source Fashion & Textiles CIC (“us”, “we”, or “our”).
                   </p>
                   <p>

@@ -1,6 +1,6 @@
 import ResourceDetails from '../../components/resources/ResourceDetails';
 import Layout from '../../components/layout/Layout';
-import { server } from '../../../thetextilecode.config';
+import { server } from '../../../openthreads.config';
 import { findResourceIndex } from '../../lib/util';
 import { IConfig } from '../../../types';
 

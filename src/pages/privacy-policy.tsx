@@ -1,6 +1,6 @@
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
-import { infoConfig } from '../../thetextilecode.config';
+import { infoConfig } from '../../openthreads.config';
 
 function Privacy({ config, newsletterId, newsletterUser }) {
   return (
@@ -378,7 +378,7 @@ function Privacy({ config, newsletterId, newsletterUser }) {
                     have been managing your personal information, please contact our privacy
                     champion in writing at 71-75, Shelton Street, Covent Garden London WC2H 9JQ,
                     United Kingdom or
-                    <a href="mailto:info@thetextilecode.com">info [at] thetextilecode [dot] com</a>.
+                    <a href="mailto:info@openthreads.dev">info [at] openthreads [dot] dev</a>.
                   </li>
                   <li>
                     We’re really glad you made it to the end of the privacy policy, because knowing

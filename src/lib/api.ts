@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import { POSTS_PATH } from './mdxUtils';
 import { ICategory, ITag } from '../../types';
-import { postCategories, postTags } from '../../thetextilecode.config';
+import { postCategories, postTags } from '../../openthreads.config';
 
 export function getPostSlugs(): string[] {
   return fs.readdirSync(POSTS_PATH);

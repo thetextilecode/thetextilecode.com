@@ -5,7 +5,7 @@ test.describe('Homepage', () => {
     await page.goto('/');
 
     // Verify the page loads with the correct title
-    await expect(page).toHaveTitle(/The Textile Code/);
+    await expect(page).toHaveTitle(/OpenThreads/);
 
     // Verify the header is present
     const header = page.locator('header');

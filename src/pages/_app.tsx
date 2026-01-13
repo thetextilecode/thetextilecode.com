@@ -31,7 +31,7 @@ import {
   sidebarConfig,
   siteConfig,
   socialConfig,
-} from '../../thetextilecode.config';
+} from '../../openthreads.config';
 import { useRouter } from 'next/router';
 
 type CustomAppProps = AppProps & {

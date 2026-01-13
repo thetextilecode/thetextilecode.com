@@ -769,7 +769,7 @@ const Header = ({
                     <div className="header-action-icon-2">
                       <Link href="/" className="mini-cart-icon">
                         <Image
-                          alt="The Textile Code"
+                          alt="OpenThreads"
                           src="/assets/images/theme/icons/icon-cart.svg"
                           sizes="100vw"
                           style={{ width: '100%', height: 'auto' }}
@@ -812,7 +812,7 @@ const Header = ({
                             <div className="shopping-cart-img">
                               <Link href="/">
                                 <Image
-                                  alt="The Textile Code"
+                                  alt="OpenThreads"
                                   src="/assets/images/shop/thumbnail-4.jpg"
                                   sizes="100vw"
                                   style={{ width: '100%', height: 'auto' }}

@@ -76,7 +76,7 @@ const Footer = ({
                 <br />
                 <br />
                 <img
-                  src="https://api.thegreenwebfoundation.org/greencheckimage/www.thetextilecode.com?nocache=true"
+                  src="https://api.thegreenwebfoundation.org/greencheckimage/www.openthreads.dev?nocache=true"
                   alt="This website is hosted Green - checked by thegreenwebfoundation.org"
                   style={{ maxWidth: '60%' }}
                 />
