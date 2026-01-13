@@ -9,7 +9,6 @@ const Menu = ({ menu }) => {
             return (
               <li key={index}>
                 <Link href={item.href}>
-
                   {item.title}
                   {item.children && <i className="fi-rs-angle-down"></i>}
                   {item.children && (
@@ -17,15 +16,12 @@ const Menu = ({ menu }) => {
                       {item.children.map((child, idx) => {
                         return (
                           <li key={idx}>
-                            <Link href={child.href}>
-                              {child.title}
-                            </Link>
+                            <Link href={child.href}>{child.title}</Link>
                           </li>
                         );
                       })}
                     </ul>
                   )}
-
                 </Link>
               </li>
             );

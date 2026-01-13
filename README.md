@@ -31,7 +31,7 @@ Sass:
 
 ### Tooltippy
 
-Pass a tooltip from within your MDX file using React Bootstrap's [Tooltip](https://react-bootstrap.netlify.app/components/overlays/#tooltips), 
+Pass a tooltip from within your MDX file using React Bootstrap's [Tooltip](https://react-bootstrap.netlify.app/components/overlays/#tooltips),
 and a custom wrapper for it:
 
 ```mdxjs
@@ -40,4 +40,3 @@ import Tooltippy from "./Tooltippy";
 ## Hello
 An <Tooltippy tooltipText={`Free as in free speech, not free beer.`} triggerText={`inline`}/> tooltip.
 ```
-

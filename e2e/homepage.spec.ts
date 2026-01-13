@@ -62,10 +62,10 @@ test.describe('Homepage', () => {
     const { getErrors } = setupConsoleErrorCollector(page);
 
     await page.goto('/');
-    
+
     // Wait for hydration to complete
     await page.waitForLoadState('networkidle');
-    
+
     // Additional wait to catch any delayed errors
     await page.waitForTimeout(1000);
 

@@ -24,8 +24,9 @@ const HomeBanner = () => {
                 Fashion Brand?
               </h4>
               <Link href="/get-involved">
-                We Want to Hear<br />From You<i className="fi-rs-arrow-right"></i>
-
+                We Want to Hear
+                <br />
+                From You<i className="fi-rs-arrow-right"></i>
               </Link>
             </div>
           </div>
@@ -52,7 +53,6 @@ const HomeBanner = () => {
               </h4>
               <Link href="/get-involved">
                 Get Started<i className="fi-rs-arrow-right"></i>
-
               </Link>
             </div>
           </div>
@@ -75,7 +75,6 @@ const HomeBanner = () => {
               </h4>
               <Link href="/resources">
                 Let's Go<i className="fi-rs-arrow-right"></i>
-
               </Link>
             </div>
           </div>

@@ -23,7 +23,6 @@ const Banner2 = () => {
 
         <Link href="/index" className="btn">
           Learn More<i className="fi-rs-arrow-right"></i>
-
         </Link>
       </div>
     </div>

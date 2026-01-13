@@ -37,30 +37,22 @@ const Timer = (endDateTime) => {
   // const countDownTime = `${timeParts.days} Days ${timeParts.hours} Hours and ${timeParts.minutes} minutes and ${timeParts.seconds} seconds`;
   return (
     <>
-      <div className='deals-countdown'>
-        <span className='countdown-section'>
-          <span className='countdown-amount hover-up'>
-            {timeParts.days}
-          </span>
-          <span className='countdown-period'> days </span>
+      <div className="deals-countdown">
+        <span className="countdown-section">
+          <span className="countdown-amount hover-up">{timeParts.days}</span>
+          <span className="countdown-period"> days </span>
         </span>
-        <span className='countdown-section'>
-          <span className='countdown-amount hover-up'>
-            {timeParts.hours}
-          </span>
-          <span className='countdown-period'> hours </span>
+        <span className="countdown-section">
+          <span className="countdown-amount hover-up">{timeParts.hours}</span>
+          <span className="countdown-period"> hours </span>
         </span>
-        <span className='countdown-section'>
-          <span className='countdown-amount hover-up'>
-            {timeParts.minutes}
-          </span>
-          <span className='countdown-period'> mins </span>
+        <span className="countdown-section">
+          <span className="countdown-amount hover-up">{timeParts.minutes}</span>
+          <span className="countdown-period"> mins </span>
         </span>
-        <span className='countdown-section'>
-          <span className='countdown-amount hover-up'>
-            {timeParts.seconds}
-          </span>
-          <span className='countdown-period'> sec </span>
+        <span className="countdown-section">
+          <span className="countdown-amount hover-up">{timeParts.seconds}</span>
+          <span className="countdown-period"> sec </span>
         </span>
       </div>
     </>

@@ -44,9 +44,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
                   <i className="fi-rs-clock"></i>&nbsp;
                   {format(parseISO(post.date!), 'MMMM dd, yyyy')}
                 </span>
-                <span className="hit-count has-dot">
-                  {post.readTime ?? 1} min read
-                </span>
+                <span className="hit-count has-dot">{post.readTime ?? 1} min read</span>
               </div>
               <Link href={`/${post.slug}`} className="text-brand">
                 Read more<i className="fi-rs-arrow-right"></i>

@@ -48,15 +48,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -114,15 +106,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -179,15 +163,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "shoe",
     "sizes": "s",
@@ -244,15 +220,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -309,15 +277,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "shoe",
     "sizes": "s",
@@ -374,15 +334,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -438,15 +390,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "shoe",
     "sizes": "s",
@@ -503,15 +447,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "dress",
     "sizes": "s",
@@ -568,15 +504,7 @@
       "expireDate": null,
       "isActive": false
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "dress",
     "sizes": "s",
@@ -633,15 +561,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -698,15 +618,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "dress",
     "sizes": "s",
@@ -763,15 +675,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "dress",
     "sizes": "s",
@@ -829,15 +733,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -896,15 +792,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -963,15 +851,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
@@ -1050,15 +930,7 @@
       "expireDate": null,
       "isActive": true
     },
-    "variations": [
-      "red",
-      "yellow",
-      "white",
-      "orange",
-      "cyan",
-      "green",
-      "purple"
-    ],
+    "variations": ["red", "yellow", "white", "orange", "cyan", "green", "purple"],
     "weight": 150,
     "tags": "women",
     "sizes": "s",
