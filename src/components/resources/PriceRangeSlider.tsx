@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { updateProductFilters } from '../../redux/action/productFiltersAction';
 
 const PriceRangeSlider = ({ updateProductFilters }) => {
-
   const Router = useRouter();
   const searchTerm = Router.query.search;
 
@@ -25,7 +24,7 @@ const PriceRangeSlider = ({ updateProductFilters }) => {
   }, [price, searchTerm]);
 
   return (
-    <div className='evara_price_slider_amount'>
+    <div className="evara_price_slider_amount">
       <InputRange
         formatLabel={(value) => `$${value}`}
         maxValue={500}

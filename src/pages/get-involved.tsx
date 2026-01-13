@@ -29,10 +29,9 @@ function GetInvolved({ config, newsletterId, newsletterUser }) {
                 <p className="wow fadeIn animated">
                   <Link
                     href="/contact"
-                    className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up">
-                    
-                      Get Involved
-                    
+                    className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up"
+                  >
+                    Get Involved
                   </Link>
                 </p>
               </div>

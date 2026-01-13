@@ -3,7 +3,7 @@ import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
 
 const BrandSlider = () => {
-  const data: { id: number, img: string }[] = [
+  const data: { id: number; img: string }[] = [
     {
       id: 1,
       img: 'brand-1.png',
@@ -41,15 +41,15 @@ const BrandSlider = () => {
           prevEl: '.custom_prev_br1',
           nextEl: '.custom_next_br1',
         }}
-        className='carousel-6-columns text-center'
+        className="carousel-6-columns text-center"
       >
         {data.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className='brand-logo'>
+            <div className="brand-logo">
               <Image
-                className='img-grey-hover'
+                className="img-grey-hover"
                 src={`/assets/images/banner/${item.img}`}
-                alt=''
+                alt=""
                 width={203}
                 height={79}
               />
@@ -59,14 +59,14 @@ const BrandSlider = () => {
       </Swiper>
 
       <div
-        className='slider-arrow slider-arrow-2 carousel-6-columns-arrow'
-        id='carousel-6-columns-3-arrows'
+        className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
+        id="carousel-6-columns-3-arrows"
       >
-        <span className='slider-btn slider-prev slick-arrow custom_prev_br1'>
-          <i className='fi-rs-angle-left'></i>
+        <span className="slider-btn slider-prev slick-arrow custom_prev_br1">
+          <i className="fi-rs-angle-left"></i>
         </span>
-        <span className='slider-btn slider-next slick-arrow custom_next_br1'>
-          <i className='fi-rs-angle-right'></i>
+        <span className="slider-btn slider-next slick-arrow custom_next_br1">
+          <i className="fi-rs-angle-right"></i>
         </span>
       </div>
     </>

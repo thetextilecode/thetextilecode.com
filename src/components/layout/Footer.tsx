@@ -64,7 +64,7 @@ const Footer = ({
                     <Link href="/credits">Credits</Link>
                   </li>
                   <li>
-                    <a href="/sitemap.xml" target={'_blank'} rel={'noreferrer'}>
+                    <a href="/sitemap.xml" target={'_blank'} rel={'noopener noreferrer'}>
                       Sitemap
                     </a>
                   </li>

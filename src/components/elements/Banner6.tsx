@@ -22,7 +22,6 @@ const Banner6 = () => {
         </h4>
         <Link href="/index">
           Shop Now<i className="fi-rs-arrow-right"></i>
-
         </Link>
       </div>
     </div>

@@ -39,10 +39,9 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
               <p>
                 <Link
                   href={'/contact'}
-                  className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand text-hover-white border-radius-5 btn-shadow-brand hover-up">
-                  
-                    Contact Me
-                  
+                  className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand text-hover-white border-radius-5 btn-shadow-brand hover-up"
+                >
+                  Contact Me
                 </Link>
               </p>
             </div>

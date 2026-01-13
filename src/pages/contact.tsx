@@ -28,10 +28,9 @@ function Contact({ config, newsletterId, newsletterUser }) {
               <p className="wow fadeIn animated">
                 <Link
                   href="/about"
-                  className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up">
-                  
-                    About Us
-                  
+                  className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up"
+                >
+                  About Us
                 </Link>
                 <a className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand bg-white text-hover-white ml-15 border-radius-5 btn-shadow-brand hover-up">
                   Support Center

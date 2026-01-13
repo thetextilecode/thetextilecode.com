@@ -26,7 +26,6 @@ const Bottom = () => {
                 </h4>
                 <Link href="/products/shop-grid-right">
                   Shop Now<i className="fi-rs-arrow-right"></i>
-
                 </Link>
               </div>
             </div>
@@ -37,7 +36,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-3.jpg"
                       alt=""
@@ -46,14 +44,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Fish Print Patched T-shirt
-                    </Link>
+                    <Link href="/products/shop-grid-right">Fish Print Patched T-shirt</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>
@@ -64,7 +59,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-4.jpg"
                       alt=""
@@ -73,14 +67,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Vintage Floral Print Dress
-                    </Link>
+                    <Link href="/products/shop-grid-right">Vintage Floral Print Dress</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>
@@ -91,7 +82,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-5.jpg"
                       alt=""
@@ -100,7 +90,6 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
@@ -123,7 +112,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-6.jpg"
                       alt=""
@@ -132,7 +120,6 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
@@ -150,7 +137,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-7.jpg"
                       alt=""
@@ -159,14 +145,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Print Patchwork Maxi Dress
-                    </Link>
+                    <Link href="/products/shop-grid-right">Print Patchwork Maxi Dress</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>
@@ -177,7 +160,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-8.jpg"
                       alt=""
@@ -186,14 +168,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Daisy Floral Print Straps Jumpsuit
-                    </Link>
+                    <Link href="/products/shop-grid-right">Daisy Floral Print Straps Jumpsuit</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>
@@ -209,7 +188,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-9.jpg"
                       alt=""
@@ -218,14 +196,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Floral Print Casual Cotton Dress
-                    </Link>
+                    <Link href="/products/shop-grid-right">Floral Print Casual Cotton Dress</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>
@@ -236,7 +211,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-1.jpg"
                       alt=""
@@ -245,14 +219,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Ruffled Solid Long Sleeve Blouse
-                    </Link>
+                    <Link href="/products/shop-grid-right">Ruffled Solid Long Sleeve Blouse</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>
@@ -263,7 +234,6 @@ const Bottom = () => {
               <article className="row align-items-center">
                 <figure className="col-md-4 mb-0">
                   <Link href="/products/shop-grid-right">
-
                     <Image
                       src="/assets/images/shop/thumbnail-2.jpg"
                       alt=""
@@ -272,14 +242,11 @@ const Bottom = () => {
                       width={600}
                       height={600}
                     />
-
                   </Link>
                 </figure>
                 <div className="col-md-8 mb-0">
                   <h4 className="title-small">
-                    <Link href="/products/shop-grid-right">
-                      Multi-color Print V-neck T-Shirt
-                    </Link>
+                    <Link href="/products/shop-grid-right">Multi-color Print V-neck T-Shirt</Link>
                   </h4>
                   <div className="product-price">
                     <span>$238.85 </span>

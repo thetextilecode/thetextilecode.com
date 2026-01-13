@@ -113,10 +113,7 @@ function Terms({ config, newsletterId, newsletterUser }) {
                   <h4>Contact Us</h4>
                   <p>
                     If you have any questions about these Terms, please{' '}
-                    <Link href="/contact">
-                      contact us
-                    </Link>
-                    .
+                    <Link href="/contact">contact us</Link>.
                   </p>
                 </div>
               </div>
