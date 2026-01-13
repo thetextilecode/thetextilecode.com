@@ -37,12 +37,8 @@ const CustomForm = ({ status, message, onValidated }) => {
       onSubmit={(e) => handleSubmit(e)}
     >
       {status === 'sending' && <div className="mc__alert mc__alert--sending">sending...</div>}
-      {status === 'error' && (
-        <div className="mc__alert mc__alert--error">{safeMessage}</div>
-      )}
-      {status === 'success' && (
-        <div className="mc__alert mc__alert--success">{safeMessage}</div>
-      )}
+      {status === 'error' && <div className="mc__alert mc__alert--error">{safeMessage}</div>}
+      {status === 'success' && <div className="mc__alert mc__alert--success">{safeMessage}</div>}
       {status !== 'success' ? (
         <div className="mc__field-container">
           <input
