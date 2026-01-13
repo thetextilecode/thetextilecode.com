@@ -12,6 +12,20 @@ updates:
     open-pull-requests-limit: 15
     commit-message:
       prefix: "chore(deps): [skip netlify] "
+    ignore:
+      # React 19 requires Next.js 15+, but Netlify's runtime adapter doesn't support it yet
+      # See: https://github.com/openthreads/openthreads.dev/pull/356
+      - dependency-name: "react"
+        versions: [">=19.0.0"]
+      - dependency-name: "react-dom"
+        versions: [">=19.0.0"]
+      - dependency-name: "@types/react"
+        versions: [">=19.0.0"]
+      # Next.js 14+ requires different configuration; stay on 13.5.x until Netlify supports newer versions
+      - dependency-name: "next"
+        versions: [">=14.0.0"]
+      - dependency-name: "eslint-config-next"
+        versions: [">=14.0.0"]
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
