@@ -4,7 +4,7 @@ import Layout from '../../components/layout/Layout';
 import { getAllPosts, getAllTags, getTagByValue } from '../../lib/api';
 import category from '../../components/sliders/Category';
 import BlogList from '../../components/elements/BlogList';
-import { blogConfig } from '../../../thetextilecode.config';
+import { blogConfig } from '../../../openthreads.config';
 
 type TagPageProps = {
   config: IConfig;

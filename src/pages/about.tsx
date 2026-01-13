@@ -29,7 +29,7 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
                 We Want to Empower Businesses in Fashion with Technology
               </h1>
               <p>
-                The Textile Code exists to develop solutions for the fashion industry with the
+                OpenThreads exists to develop solutions for the fashion industry with the
                 planet in mind. We provide the fashion and textile sector with technical solutions
                 focused on conscious decisions from the ground up, to better tackle important issues
                 such as social and environmental impact.

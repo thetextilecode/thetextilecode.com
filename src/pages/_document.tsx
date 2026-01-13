@@ -24,7 +24,7 @@ class MyDocument extends Document {
             }}
           ></script>
         </Head>
-        <body className={'thetextilecode'}>
+        <body className={'openthreads'}>
           <Main />
           <NextScript />
         </body>

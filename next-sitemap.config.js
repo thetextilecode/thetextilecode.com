@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: process.env.SITE_URL || 'https://www.thetextilecode.com',
+  siteUrl: process.env.SITE_URL || 'https://www.openthreads.dev',
   exclude: [
     '/404*',
     '/account*',

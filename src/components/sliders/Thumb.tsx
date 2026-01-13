@@ -70,7 +70,7 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
                   <div style={{ position: 'relative', height: 'auto', width: '100%' }}>
                     <Image
                       src={item.thumb}
-                      alt="The Textile Code"
+                      alt="OpenThreads"
                       sizes="100vw"
                       style={{ width: '100%', height: 'auto' }}
                       height={600}
@@ -82,7 +82,7 @@ const ThumbSlider = ({ resource }: IThumbSlider) => {
             ) : (
               <Image
                 src={'/assets/images/page/placeholder.png'}
-                alt="The Textile Code"
+                alt="OpenThreads"
                 sizes="100vw"
                 style={{ width: '100%', height: 'auto' }}
                 height={600}

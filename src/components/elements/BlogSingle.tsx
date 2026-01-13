@@ -4,7 +4,7 @@ import ShareIcons from './ShareIcons';
 import CommentsForm from './CommentsForm';
 import CommentsArea from './CommentsArea';
 import { IBlogPost } from '../../../types';
-import { blogConfig } from '../../../thetextilecode.config';
+import { blogConfig } from '../../../openthreads.config';
 
 interface IBlogSingle {
   post: IBlogPost;
