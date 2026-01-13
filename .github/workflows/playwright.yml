@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: CI
 
 on:
   push:
@@ -7,7 +7,31 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  lint-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check formatting (Prettier)
+        run: npx prettier --check "**/*.{mdx,tsx,ts,md,js,jsx,json}"
+
+      - name: Lint (ESLint)
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+  e2e-tests:
+    needs: lint-and-build
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
