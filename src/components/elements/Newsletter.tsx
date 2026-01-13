@@ -3,13 +3,18 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { useState } from 'react';
 
 /**
- * Sanitize message by stripping HTML tags to prevent XSS attacks.
+ * Sanitize message by escaping HTML to prevent XSS attacks.
  * Mailchimp messages may contain HTML that could be malicious.
  */
 const sanitizeMessage = (message: string | null): string => {
   if (!message) return '';
-  // Strip HTML tags to get plain text, preventing XSS
-  return message.replace(/<[^>]*>/g, '');
+  // Escape HTML special characters so any tags are rendered as text, preventing XSS
+  return message
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 };
 
 const CustomForm = ({ status, message, onValidated }) => {
