@@ -11,22 +11,38 @@ const ShareIcons = ({ title, url }: IShareIcons) => {
           <strong className="mr-10">Share this:</strong>
         </li>
         <li className="social-facebook">
-          <a href={`https://www.facebook.com/sharer.php?u=${url}`}>
+          <a
+            href={`https://www.facebook.com/sharer.php?u=${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/assets/images/theme/icons/icon-facebook.svg" alt="Facebook" />
           </a>
         </li>
         <li className="social-twitter">
-          <a href={`https://twitter.com/intent/tweet?url=${url}&text=${title}`}>
+          <a
+            href={`https://twitter.com/intent/tweet?url=${url}&text=${title}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/assets/images/theme/icons/icon-twitter.svg" alt="Twitter" />
           </a>
         </li>
         <li className="social-instagram">
-          <a href={`https://www.instagram.com/?url=${url}`}>
+          <a
+            href={`https://www.instagram.com/?url=${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/assets/images/theme/icons/icon-instagram.svg" alt="Instagram" />
           </a>
         </li>
         <li className="social-linkedin">
-          <a href={`https://pinterest.com/pin/create/button/?url=${url}`}>
+          <a
+            href={`https://pinterest.com/pin/create/button/?url=${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/assets/images/theme/icons/icon-pinterest.svg" alt="Pinterest" />
           </a>
         </li>
