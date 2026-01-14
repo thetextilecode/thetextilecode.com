@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   lint-and-build:
@@ -61,3 +62,103 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+  # Visual preview screenshots for PRs (especially useful for dependabot PRs)
+  screenshots:
+    if: github.event_name == 'pull_request'
+    needs: lint-and-build
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture screenshots
+        run: npx playwright test e2e/screenshots.spec.ts
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-screenshots
+          path: screenshots/
+          retention-days: 30
+
+      - name: Post screenshot preview comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const screenshotDir = 'screenshots';
+            const files = fs.readdirSync(screenshotDir);
+
+            // Get the artifact URL
+            const { data: artifacts } = await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: context.runId,
+            });
+
+            const screenshotArtifact = artifacts.artifacts.find(a => a.name === 'preview-screenshots');
+            const artifactUrl = screenshotArtifact
+              ? `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}/artifacts/${screenshotArtifact.id}`
+              : `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            // Group files by page
+            const desktopFiles = files.filter(f => !f.includes('-mobile'));
+            const mobileFiles = files.filter(f => f.includes('-mobile'));
+
+            let body = `## 📸 Visual Preview Screenshots\n\n`;
+            body += `Screenshots captured from this PR's build. [Download all screenshots](${artifactUrl})\n\n`;
+            body += `### Desktop\n`;
+            desktopFiles.forEach(file => {
+              const pageName = file.replace('.png', '').replace(/-/g, ' ');
+              body += `- \`${pageName}\`\n`;
+            });
+            body += `\n### Mobile (375px)\n`;
+            mobileFiles.forEach(file => {
+              const pageName = file.replace('-mobile.png', '').replace(/-/g, ' ');
+              body += `- \`${pageName}\`\n`;
+            });
+            body += `\n---\n`;
+            body += `*Commit: ${context.sha.substring(0, 7)} | [View workflow run](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})*`;
+
+            // Find existing comment to update
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('📸 Visual Preview Screenshots')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body,
+              });
+            }
