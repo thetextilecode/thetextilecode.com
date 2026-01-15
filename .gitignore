@@ -112,8 +112,4 @@ dist
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-# Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+/screenshots/
