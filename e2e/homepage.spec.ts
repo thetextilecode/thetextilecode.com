@@ -1,83 +1,82 @@
 import { test, expect } from '@playwright/test';
-import { setupConsoleErrorCollector, hasNextJsErrorOverlay } from './helpers/consoleErrors';
+import { setupConsoleErrorCollector, assertPageHealthy } from './helpers/consoleErrors';
 
 test.describe('Homepage', () => {
-  test('should load successfully with correct title', async ({ page }) => {
+  test('should load and hydrate successfully', async ({ page }) => {
     const { getErrors } = setupConsoleErrorCollector(page);
 
     await page.goto('/');
+    await page.waitForLoadState('networkidle');
 
-    // CRITICAL: Fail if Next.js error overlay is visible
-    expect(await hasNextJsErrorOverlay(page)).toBe(false);
+    // Comprehensive health check: not blank, no errors, hydrated
+    await assertPageHealthy(page, getErrors);
 
     // Verify the page loads with the correct title
     await expect(page).toHaveTitle(/The Textile Code/);
 
-    // Verify the header is present
-    const header = page.locator('header');
-    await expect(header).toBeVisible();
-
-    // Fail if there are any console errors
-    const errors = getErrors();
-    expect(errors, `Console errors detected: ${errors.join(', ')}`).toHaveLength(0);
+    // Verify key elements are present
+    await expect(page.locator('header')).toBeVisible();
+    await expect(page.locator('footer')).toBeVisible();
   });
 
-  test('should have working navigation links', async ({ page }) => {
+  test('should have interactive navigation links', async ({ page }) => {
     const { getErrors } = setupConsoleErrorCollector(page);
 
     await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    await assertPageHealthy(page, getErrors);
 
-    // CRITICAL: Fail if Next.js error overlay is visible
-    expect(await hasNextJsErrorOverlay(page)).toBe(false);
+    // INTERACTIVITY TEST: Actually click and navigate
+    // This proves JavaScript is working, not just that HTML exists
+    await page.getByRole('link', { name: 'Blog' }).first().click();
+    await expect(page).toHaveURL('/blog');
 
-    // Check that main navigation links exist
-    await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Blog' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Resources' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible();
+    // Verify the destination page also works
+    await assertPageHealthy(page, getErrors);
+  });
 
-    // Fail if there are any console errors
-    const errors = getErrors();
-    expect(errors, `Console errors detected: ${errors.join(', ')}`).toHaveLength(0);
+  test('should navigate to About page', async ({ page }) => {
+    const { getErrors } = setupConsoleErrorCollector(page);
+
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+
+    await page.getByRole('link', { name: 'About' }).first().click();
+    await expect(page).toHaveURL('/about');
+    await assertPageHealthy(page, getErrors);
+  });
+
+  test('should navigate to Resources page', async ({ page }) => {
+    const { getErrors } = setupConsoleErrorCollector(page);
+
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+
+    await page.getByRole('link', { name: 'Resources' }).first().click();
+    await expect(page).toHaveURL('/resources');
+    await assertPageHealthy(page, getErrors);
+  });
+
+  test('should navigate to Contact page', async ({ page }) => {
+    const { getErrors } = setupConsoleErrorCollector(page);
+
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+
+    await page.getByRole('link', { name: 'Contact' }).first().click();
+    await expect(page).toHaveURL('/contact');
+    await assertPageHealthy(page, getErrors);
   });
 
   test('should display the Latest Articles section', async ({ page }) => {
     const { getErrors } = setupConsoleErrorCollector(page);
 
     await page.goto('/');
-
-    // CRITICAL: Fail if Next.js error overlay is visible
-    expect(await hasNextJsErrorOverlay(page)).toBe(false);
+    await page.waitForLoadState('networkidle');
+    await assertPageHealthy(page, getErrors);
 
     // Check for the Latest Articles section
     const articlesSection = page.getByText('Latest Articles');
     await expect(articlesSection).toBeVisible();
-
-    // Fail if there are any console errors
-    const errors = getErrors();
-    expect(errors, `Console errors detected: ${errors.join(', ')}`).toHaveLength(0);
-  });
-
-  test('should not have any client-side errors after hydration', async ({ page }) => {
-    const { getErrors } = setupConsoleErrorCollector(page);
-
-    await page.goto('/');
-
-    // Wait for hydration to complete
-    await page.waitForLoadState('networkidle');
-
-    // Additional wait to catch any delayed errors
-    await page.waitForTimeout(1000);
-
-    // CRITICAL: Fail if Next.js error overlay is visible
-    expect(await hasNextJsErrorOverlay(page)).toBe(false);
-
-    // Verify main content is visible (not just the error page)
-    await expect(page.locator('header')).toBeVisible();
-    await expect(page.locator('footer')).toBeVisible();
-
-    // Fail if there are any console errors
-    const errors = getErrors();
-    expect(errors, `Console errors detected: ${errors.join(', ')}`).toHaveLength(0);
   });
 });
