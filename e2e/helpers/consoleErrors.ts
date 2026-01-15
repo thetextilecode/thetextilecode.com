@@ -104,10 +104,7 @@ export async function waitForContent(page: Page): Promise<void> {
  * Comprehensive page health check that should be run on every page.
  * Combines all checks: no errors, no overlay, hydrated, has content.
  */
-export async function assertPageHealthy(
-  page: Page,
-  getErrors: () => string[]
-): Promise<void> {
+export async function assertPageHealthy(page: Page, getErrors: () => string[]): Promise<void> {
   const { expect } = await import('@playwright/test');
 
   // Wait for content to be visible (times out if page is blank)

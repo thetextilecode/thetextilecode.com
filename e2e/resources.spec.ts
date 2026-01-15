@@ -1,8 +1,5 @@
 import { test, expect } from '@playwright/test';
-import {
-  setupConsoleErrorCollector,
-  assertPageHealthy,
-} from './helpers/consoleErrors';
+import { setupConsoleErrorCollector, assertPageHealthy } from './helpers/consoleErrors';
 
 test.describe('Resources Page', () => {
   test('should load and hydrate the resources page', async ({ page }) => {
