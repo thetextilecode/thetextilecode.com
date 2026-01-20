@@ -37,7 +37,7 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^8.1.2",
     "react-responsive-modal": "^6.4.2",
-    "react-slick": "^0.29.0",
+    "react-slick": "^0.31.0",
     "react-toast-notifications": "^2.5.1",
     "react-toastify": "^11.0.5",
     "reactstrap": "^9.2.1",
@@ -45,7 +45,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
     "select2": "^4.1.0-rc.0",
-    "sharp": "^0.32.6",
+    "sharp": "^0.34.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^12.0.3",
     "wowjs": "^1.1.3"
